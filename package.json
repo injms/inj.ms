@@ -1,0 +1,16 @@
+{
+  "name": "inj.ms",
+  "version": "1.0.0",
+  "description": "Microsite and redirects.",
+  "main": "yarn build",
+  "repository": "git@github.com:injms/inj.ms.git",
+  "author": "Ian James <ian@ianjames.net>",
+  "license": "UNLICENSED",
+  "private": false,
+  "scripts": {
+    "build": "node init"
+  },
+  "dependencies": {
+    "fs-extra": "^5.0.0"
+  }
+}
