@@ -1,19 +1,19 @@
 # Redirects from what the browser requests to what we serve
 
-/inceptionhorn 	http://inception.davepedu.com/noflash.php	302
-/poplb 			https://iso.500px.com/50-photos-of-pandas-looking-bored	302
-/quokkaselfie	http://news.nationalgeographic.com/news/2015/03/150306-quokkas-selfies-animals-science-photography-australia/	302
-/soip6 			https://www.apple.com/iphone/world-gallery/	302
-/iubenda 		https://github.com/injms/iubenda-for-wp	302
-/cisfas 		https://www.theguardian.com/commentisfree/2002/nov/29/1	302
-/tbpsit 		http://www.boston.com/bigpicture/2014/04/survival_in_the_amazon.html	302
-/tmtayn 		http://edition.cnn.com/interactive/2014/04/opinion/sutter-change-the-list-pangolin-trafficking/	302
-/ipoie6 		http://www.brucelawson.co.uk/2010/in-praise-of-ie6/	302
-/ngpwsb 		http://news.nationalgeographic.com/news/2014/03/140302-pebble-mine-bristol-bay-alaska-epa-environment/	302
-/rick 			https://youtu.be/dQw4w9WgXcQ	302
-/photography 	https://www.ianjamesphotography.com/photos	302
-/linkedin 		https://uk.linkedin.com/in/irjames/	302
-/instagram 		https://instagram.com/inj.ms	302
-/github 		https://github.com/injms	302
-/twitter 		https://twitter.com/_irj	302
-/copyright		https://www.ianjamesphotography.com/copyright
+/inceptionhorn https://inception.davepedu.com/	302
+/poplb 			   https://iso.500px.com/50-photos-of-pandas-looking-bored	302
+/quokkaselfie	 http://news.nationalgeographic.com/news/2015/03/150306-quokkas-selfies-animals-science-photography-australia/	302
+/soip6 			   https://www.apple.com/iphone/world-gallery/	302
+/iubenda 		   https://github.com/injms/iubenda-for-wp	302
+/cisfas 		   https://www.theguardian.com/commentisfree/2002/nov/29/1	302
+/tbpsit 		   http://www.boston.com/bigpicture/2014/04/survival_in_the_amazon.html	302
+/tmtayn 	  	 http://edition.cnn.com/interactive/2014/04/opinion/sutter-change-the-list-pangolin-trafficking/	302
+/ipoie6 		   http://www.brucelawson.co.uk/2010/in-praise-of-ie6/	302
+/ngpwsb 		   http://news.nationalgeographic.com/news/2014/03/140302-pebble-mine-bristol-bay-alaska-epa-environment/	302
+/rick 			   https://youtu.be/dQw4w9WgXcQ	302
+/photography 	 https://www.ianjamesphotography.com/photos	302
+/linkedin 		 https://uk.linkedin.com/in/irjames/	302
+/instagram 		 https://instagram.com/inj.ms	302
+/github 		   https://github.com/injms	302
+/twitter 		   https://twitter.com/_irj	302
+/copyright		 https://www.ianjamesphotography.com/copyright
