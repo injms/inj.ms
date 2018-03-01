@@ -1,0 +1,21 @@
+@mixin grid {
+	display: grid;
+	font: normal #{(16em / 16)} / #{1.6} $sans-serif;
+ 	grid-template-areas: "m1 one m2 two m3 three m4 four m5 five m6";
+	grid-template-columns: 4% 12% 4% 12% 4% 28% 4% 12% 4% 12% 4%;
+	grid-template-rows: auto;
+	justify-content: space-evenly;	
+	margin: auto;
+	max-width: (1440em / 16);
+
+	@media screen and (min-width: (600em / 16)) {
+		font-size: (18em / 16);
+		max-width: (1440em / 18);
+	}
+
+	@media screen and (min-width: (800em / 16)) {
+		font-size: (20em / 16);
+		max-width: (1440em / 20);
+		// grid-template-columns: 2% 14% 2% 14% 2% 32% 2% 14% 2% 14% 2%;
+	}
+}

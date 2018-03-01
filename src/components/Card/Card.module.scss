@@ -1,0 +1,122 @@
+@import "../../global-styles/_settings";
+@import "../../global-styles/_settings.colours";
+@import "../../global-styles/_grid";
+
+.grid {
+	@include grid();
+}
+
+$midnight: #141E30;
+
+body {
+	background: $lightergrey;
+}
+
+.hdr {
+	grid-column: one / four;
+
+	@media screen and (min-width: (600em / 16)) {
+		grid-column: one / three;
+	}
+
+	@media screen and (min-width: (800em / 16)) {
+		grid-column: one / two;
+	}
+}
+
+.wrapper {
+	grid-column: one / five;
+
+	@media screen and (min-width: (700em / 16)) {
+		grid-column: two / three;
+	}
+
+	p {
+		font-size: (20em / 16);
+		line-height: 1.55;
+		color: $midnight;
+	}
+}
+
+.intro {
+	background: $midnight;  
+	background: linear-gradient(to bottom right, #243B55, $midnight);
+	font: normal 3em / #{1} $heading;
+	margin: 0;
+	padding: 1em 0 0.5em 0;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent; 
+	text-transform: lowercase;
+
+	@media screen and (min-width: (700em / 16)) {
+		font-size: 5.7vw;
+	}
+
+	@media screen and (min-width: (970em / 16)) {
+		font-size: 5.7vw;
+	}
+
+	@media screen and (min-width: (1440em / 16)) {
+		font-size: 3.8em;
+	}
+
+	&::before {
+		display: inline-block;
+		border-radius: 0.03em;
+		background: $green url("https://www.gravatar.com/avatar/9707930790338feb7fae3cfc32b36b15.jpg?s=85") no-repeat top center;
+		height: 0.74em;
+		margin: 0 0.2em 0 0;
+		width : ((0.74em / 2) * 3);
+		content: " ";
+		position: relative;
+		background-size: contain;
+		background-size: cover;
+
+		@media screen and (-webkit-min-device-pixel-ratio: 2),
+			   screen and (   min--moz-device-pixel-ratio: 2),
+			   screen and (     -o-min-device-pixel-ratio: 2/1),
+			   screen and (        min-device-pixel-ratio: 2),
+			   screen and (                min-resolution: 192dpi),
+			   screen and (                min-resolution: 2dppx) { 
+			background-image: url("https://www.gravatar.com/avatar/9707930790338feb7fae3cfc32b36b15.jpg?s=160");
+		}
+	}
+}
+
+
+
+.ftr {
+	grid-column: one / six;
+	display: flex;
+	padding: 2em 0;
+	flex-wrap: wrap;
+	@media screen and (min-width: (700em / 16)) {
+		grid-column: two / six;
+	}
+}
+
+.button {
+	background: $white linear-gradient(to top right, $white, $white);
+	text-decoration : none;
+	border-radius   : 0.35em;
+	border          : 0.2em solid $midnight;
+	padding         : 1em 1.5em;
+	display         : flex;
+	margin          : 0 1em 1em 0;
+	width           : auto;
+	align-items     : center;
+	justify-content : flex-start;
+	color           : $midnight;
+	overflow        : hidden;
+	position        : relative;
+	transition: background-image 200ms ease-out;
+
+	&:hover {
+		background: $yellow linear-gradient(to top right, $red, $yellow);
+	}
+}
+
+.button__image {
+	margin: 0 1em 0 0;
+}
