@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
+    "fs-extra": "^5.0.0",
     "gatsby": "^1.9.218",
     "gatsby-link": "^1.6.38",
     "gatsby-plugin-google-fonts": "^0.0.3",
@@ -17,7 +18,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && node redirects.js",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
