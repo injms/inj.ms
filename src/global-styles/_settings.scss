@@ -1,0 +1,19 @@
+// Settings should just contain variables
+// -----------------------------------------------------------------------------
+
+
+ // @import url('https://fonts.googleapis.com/css?family=Rubik:500,500i');
+// -----------------------------------------------------------------------------
+// fonts
+// -----------------------------------------------------------------------------
+$sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$serif : "Georgia", "Times New Roman", serif;
+$monospace : "Fira Code", "Fira Mono", "SFMono-Regular", "Menlo", "Consolas", "Monaco", "Courier New", monospace;
+
+
+$heading : "Rubik", $sans-serif;
+
+// -----------------------------------------------------------------------------
+// z-index
+// -----------------------------------------------------------------------------
+$elements: modals, navigation;   
