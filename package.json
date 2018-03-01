@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "inj.ms",
+  "description": "Site built with Gatsby (react based static site generator)",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ian James, https://inj.ms/github",
   "dependencies": {
     "gatsby": "^1.9.218",
     "gatsby-link": "^1.6.38",
