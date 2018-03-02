@@ -2,6 +2,13 @@
 @import "../../global-styles/_settings.colours";
 @import "../../global-styles/_grid";
 
+
+@font-face {
+    font-family: 'rubikmedium';
+    src: url('../../fonts/rubik-medium.woff2') format('woff2'),
+     	 url('../../fonts/rubik-medium.woff') format('woff');
+}
+
 .grid {
 	@include grid();
 }

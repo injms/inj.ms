@@ -1,7 +1,15 @@
 import React from 'react';
 
-import styles from './Card.module.scss';
+import RubikWoff2 from '../../fonts/rubik-medium.woff2';
+import RubikWoff from '../../fonts/rubik-medium.woff';
+
+import iconGitHub from '../../icons/github.svg';
+import iconLinkedIn from '../../icons/linkedin.svg';
+import iconInstagram from '../../icons/instagram.svg';
+import iconImage from '../../icons/image.svg';
+
 import Button from '../Button/Button.jsx';
+import styles from './Card.module.scss';
 
 class Card extends React.Component {
 
@@ -20,10 +28,10 @@ class Card extends React.Component {
                         <img className={styles.button__image} src="https://icongr.am/feather/mail.svg?size=40&color=141E30" width="40" height="40" />
                         Email
                     </a> */}
-                    <Button to="https://inj.ms/github" icon="github">GitHub</Button>
-                    <Button to="https://inj.ms/linkedin" icon="linkedin">LinkedIn</Button>
-                    <Button to="https://inj.ms/instagram" icon="instagram">Instagram</Button>
-                    <Button to="https://inj.ms/photography" icon="image">Photos</Button>
+                    <Button to="https://inj.ms/github" icon={iconGitHub}>GitHub</Button>
+                    <Button to="https://inj.ms/linkedin" icon={iconLinkedIn}>LinkedIn</Button>
+                    <Button to="https://inj.ms/instagram" icon={iconInstagram}>Instagram</Button>
+                    <Button to="https://inj.ms/photography" icon={iconImage}>Photos</Button>
                 </footer>
             </article>
         );
