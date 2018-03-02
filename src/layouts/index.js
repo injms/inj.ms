@@ -44,7 +44,9 @@ const link = [
 const TemplateWrapper = ({ children }) => (
     <section>
         <Helmet meta={metadata} link={link} title={title} /> 
-        <Card />
+        <Card title={title.replace(' | inj.ms', '')}>
+            <p>I'm Ian and I wear many hats of many colours - though usually I'm found wearing my <b>front end developer</b> trilby or my <b>digital project manager</b> bowler. In my spare time I wear a photography beanie.</p>
+        </Card>
     </section>
 );
 
