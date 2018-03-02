@@ -39,15 +39,19 @@ body {
 }
 
 .intro {
-	background: $midnight;  
-	background: linear-gradient(to bottom right, #243B55, $midnight);
+	color: $midnight;
 	font: normal 3em / #{1} $heading;
 	margin: 0;
 	padding: 1em 0 0.5em 0;
-	background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent; 
 	text-transform: lowercase;
+
+	@supports (background-clip: text) or (-webkit-background-clip: text) {
+		background: $midnight;  
+		background: linear-gradient(to top right, #243B55, $midnight);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent; 
+	}
 
 	@media screen and (min-width: (700em / 16)) {
 		font-size: 5.7vw;
@@ -94,29 +98,4 @@ body {
 	@media screen and (min-width: (700em / 16)) {
 		grid-column: two / six;
 	}
-}
-
-.button {
-	background: $white linear-gradient(to top right, $white, $white);
-	text-decoration : none;
-	border-radius   : 0.35em;
-	border          : 0.2em solid $midnight;
-	padding         : 1em 1.5em;
-	display         : flex;
-	margin          : 0 1em 1em 0;
-	width           : auto;
-	align-items     : center;
-	justify-content : flex-start;
-	color           : $midnight;
-	overflow        : hidden;
-	position        : relative;
-	transition: background-image 200ms ease-out;
-
-	&:hover {
-		background: $yellow linear-gradient(to top right, $red, $yellow);
-	}
-}
-
-.button__image {
-	margin: 0 1em 0 0;
 }

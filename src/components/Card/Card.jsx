@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import styles from './Card.module.scss';
+import Button from '../Button/Button.jsx';
 
 class Card extends React.Component {
 
@@ -9,32 +10,20 @@ class Card extends React.Component {
         return(
             <article className={styles.grid}>
                 <header className={styles.hdr}>
-                    <h1 className={styles.intro}>Ian makes things for the web<span className={styles.highlight}>.</span></h1>
+                    <h1 className={styles.intro}>{this.props.title}</h1>
                 </header>
             	<section className={styles.wrapper}>
-                    <p>I'm Ian and I wear many hats of many colours - though usually I'm found wearing my <b>front end developer</b> trilby or my <b>digital project manager</b> bowler. In my spare time I wear a photography beanie.</p>
+                    {this.props.children}
             	</section>
                 <footer className={styles.ftr}>
                     {/* <a className={styles.button}>
                         <img className={styles.button__image} src="https://icongr.am/feather/mail.svg?size=40&color=141E30" width="40" height="40" />
                         Email
                     </a> */}
-                    <a href="https://inj.ms/github" className={styles.button} onMouseMove={this.gradientTracking}>
-                        <img alt="" aria-hidden="true" role="presentation" className={styles.button__image} src="https://icongr.am/feather/github.svg?size=40&color=141E30" width="40" height="40" />
-                        GitHub
-                    </a>
-                    <a href="https://inj.ms/linkedin" className={styles.button}>
-                        <img alt="" aria-hidden="true" role="presentation" className={styles.button__image} src="https://icongr.am/feather/linkedin.svg?size=40&color=141E30" width="40" height="40" />
-                        LinkedIn
-                    </a>
-                    <a href="https://inj.ms/instagram" className={styles.button}>
-                        <img alt="" aria-hidden="true" role="presentation" className={styles.button__image} src="https://icongr.am/feather/instagram.svg?size=40&color=141E30" width="40" height="40" />
-                        Instagram
-                    </a>
-                    <a href="https://inj.ms/photography" className={styles.button}>
-                        <img alt="" aria-hidden="true" role="presentation" className={styles.button__image} src="https://icongr.am/feather/image.svg?size=40&color=141E30" width="40" height="40" />
-                        Photos
-                    </a>
+                    <Button to="https://inj.ms/github" icon="github">GitHub</Button>
+                    <Button to="https://inj.ms/linkedin" icon="linkedin">LinkedIn</Button>
+                    <Button to="https://inj.ms/instagram" icon="instagram">Instagram</Button>
+                    <Button to="https://inj.ms/photography" icon="image">Photos</Button>
                 </footer>
             </article>
         );
