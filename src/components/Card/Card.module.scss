@@ -52,14 +52,6 @@ body {
 	padding: 1em 0 0.5em 0;
 	text-transform: lowercase;
 
-	@supports (background-clip: text) or (-webkit-background-clip: text) {
-		background: $midnight;  
-		background: linear-gradient(to top right, #243B55, $midnight);
-		background-clip: text;
-		-webkit-background-clip: text;
-		color: transparent; 
-	}
-
 	@media screen and (min-width: (700em / 16)) {
 		font-size: 5.7vw;
 	}
@@ -72,26 +64,14 @@ body {
 		font-size: 3.8em;
 	}
 
-	&::before {
+	img {
 		display: inline-block;
 		border-radius: 0.03em;
-		background: $green url("https://www.gravatar.com/avatar/9707930790338feb7fae3cfc32b36b15.jpg?s=85") no-repeat top center;
+		background: $green;
 		height: 0.74em;
 		margin: 0 0.2em 0 0;
 		width : ((0.74em / 2) * 3);
-		content: " ";
 		position: relative;
-		background-size: contain;
-		background-size: cover;
-
-		@media screen and (-webkit-min-device-pixel-ratio: 2),
-			   screen and (   min--moz-device-pixel-ratio: 2),
-			   screen and (     -o-min-device-pixel-ratio: 2/1),
-			   screen and (        min-device-pixel-ratio: 2),
-			   screen and (                min-resolution: 192dpi),
-			   screen and (                min-resolution: 2dppx) { 
-			background-image: url("https://www.gravatar.com/avatar/9707930790338feb7fae3cfc32b36b15.jpg?s=160");
-		}
 	}
 }
 

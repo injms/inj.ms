@@ -11,6 +11,11 @@ import iconImage from '../../icons/image.svg';
 import Button from '../Button/Button.jsx';
 import styles from './Card.module.scss';
 
+import avatar from '../../images/ian-james.jpg';
+import avatar2 from '../../images/ian-james@2x.jpg';
+import avatar3 from '../../images/ian-james@3x.jpg';
+const srcset = `${avatar} 90w, ${avatar2} 180w, ${avatar3} 270w`;
+
 class Card extends React.Component {
 
     render() {
@@ -18,7 +23,10 @@ class Card extends React.Component {
         return(
             <article className={styles.grid}>
                 <header className={styles.hdr}>
-                    <h1 className={styles.intro}>{this.props.title}</h1>
+                    <h1 className={styles.intro}>
+                        <img src={avatar} srcSet={srcset} sizes="1.11em" alt="" aria-hidden="true" role="presentation" />
+                        {this.props.title}
+                    </h1>
                 </header>
             	<section className={styles.wrapper}>
                     {this.props.children}
