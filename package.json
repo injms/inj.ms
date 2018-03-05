@@ -17,7 +17,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build && node redirects.js",
+    "build": "gatsby build && node copyandpaste.js",
     "serve" : "gatsby build && gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",

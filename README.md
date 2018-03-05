@@ -1,13 +1,7 @@
-# gatsby-starter-default
-The default Gatsby starter
+# inj.ms
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+Personal business-card style site.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+Built using [Gatsby](https://www.gatsbyjs.org). Styled using [Sass](http://sass-lang.com/) and the CSS modules technique. Hosted on [Netlify](http://netlify.com/).
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Icons are from [Feather](https://feathericons.com/). Headline font is [Rubik Medium](https://fonts.google.com/specimen/Rubik).
