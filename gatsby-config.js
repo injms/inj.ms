@@ -16,15 +16,7 @@ module.exports = {
 				display: `minimal-ui`
 			},
 		},
-		`gatsby-plugin-offline`,
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `posts`,
-				path: `${__dirname}/src/posts`,
-			}
-		},
-		`gatsby-transformer-remark`
+		`gatsby-plugin-offline`
 	],
 	polyfill: false
 };
