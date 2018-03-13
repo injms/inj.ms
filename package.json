@@ -21,7 +21,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build && node copyandpaste.js",
+    "build": "gatsby build",
     "serve": "gatsby build && gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
