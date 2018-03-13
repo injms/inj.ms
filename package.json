@@ -7,8 +7,12 @@
     "fs-extra": "^5.0.0",
     "gatsby": "^1.9.218",
     "gatsby-link": "^1.6.38",
+    "gatsby-plugin-manifest": "^1.0.15",
+    "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-plugin-sass": "^1.0.18",
+    "gatsby-source-filesystem": "^1.5.27",
+    "gatsby-transformer-remark": "^1.7.36",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
@@ -18,7 +22,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build && node copyandpaste.js",
-    "serve" : "gatsby build && gatsby serve",
+    "serve": "gatsby build && gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
