@@ -62,7 +62,13 @@ typings/
 # Project dependencies
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
-.cache/
 # Build directory
-public/
+
+node_modules/
+public
+.gatsby-context.js
 .DS_Store
+.intermediate-representation/
+.cache/
+yarn.lock
+
