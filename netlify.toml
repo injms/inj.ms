@@ -104,6 +104,18 @@
     force = false
 
 [[redirects]]
+    from = "/photo"
+    to = "https://www.ianjamesphotography.com/photos"
+    status = 302
+    force = false
+
+[[redirects]]
+    from = "/photos"
+    to = "https://www.ianjamesphotography.com/photos"
+    status = 302
+    force = false
+
+[[redirects]]
     from = "/linkedin"
     to = "https://uk.linkedin.com/in/irjames/"
     status = 302
