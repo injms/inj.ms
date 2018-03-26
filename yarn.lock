@@ -3213,6 +3213,19 @@ gatsby-1-config-css-modules@^1.0.10:
   dependencies:
     babel-runtime "^6.26.0"
 
+gatsby-1-config-css-modules@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-1-config-css-modules/-/gatsby-1-config-css-modules-1.0.11.tgz#5a102c6b11f9a6963b3892ecc959511e1688e525"
+  dependencies:
+    babel-runtime "^6.26.0"
+
+gatsby-1-config-extract-plugin@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-1-config-extract-plugin/-/gatsby-1-config-extract-plugin-1.0.2.tgz#2ca0779f212009d06e444cb084d182f957b7190c"
+  dependencies:
+    babel-runtime "^6.26.0"
+    extract-text-webpack-plugin "^1.0.1"
+
 gatsby-cli@^1.1.45:
   version "1.1.45"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.45.tgz#d68f780bc861130c9afe7dae7cd5bdb665b0f05a"
@@ -3272,13 +3285,13 @@ gatsby-plugin-react-helmet@^2.0.5:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-plugin-sass@^1.0.18:
-  version "1.0.18"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-1.0.18.tgz#a5d711db25353e3613c15beb650ad159f920ad91"
+gatsby-plugin-sass@^1.0.24:
+  version "1.0.24"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-1.0.24.tgz#9024e7e339b51a2a6b14dde977001ecc27c57676"
   dependencies:
     babel-runtime "^6.26.0"
-    extract-text-webpack-plugin "^1.0.1"
-    gatsby-1-config-css-modules "^1.0.10"
+    gatsby-1-config-css-modules "^1.0.11"
+    gatsby-1-config-extract-plugin "^1.0.2"
     node-sass "^4.5.2"
     sass-loader "^4.1.1"
     webpack "^1.13.3"
