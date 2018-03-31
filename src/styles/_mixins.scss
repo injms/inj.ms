@@ -1,0 +1,23 @@
+// These are just mixins; nothing else.
+// Don't worry about using mixins to get rid of vendor prefixes; autoprefixer
+// will do that for us.
+
+// -----------------------------------------------------------------------------
+// z-index
+// -----------------------------------------------------------------------------
+// Use this to warn if an element isn't in the list.
+// For example: 
+//		z-index: ($elements, $header); 
+// This returns a number if in the list; warns if not in the list.
+// -----------------------------------------------------------------------------
+@function z($list, $element) {
+
+   $z-index: index($list, $element);
+
+   @if $z-index {
+      @return $z-index;
+   }
+
+   @warn 'There is no item "#{$element}" in this list; choose one of: #{$list}';
+   @return null;
+}  
