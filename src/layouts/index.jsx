@@ -4,8 +4,6 @@ import Helmet from 'react-helmet'
 
 import IntroCard from '../components/IntroCard'
 
-import './index.scss';
-
 const title = `ian makes things for the web | inj.ms`;
 const description = `I'm Ian and I wear many hats of many colours - though usually I'm found wearing my front end developer trilby or my digital project manager bowler.`;
 const canonicalUrl = `https://inj.ms`;
