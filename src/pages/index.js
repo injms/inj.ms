@@ -1,13 +1,11 @@
-import React from 'react';
-import Link from 'gatsby-link';
+import React from 'react'
+import Link from 'gatsby-link'
+import IntroCard from '../components/IntroCard'
 
 const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-);
+    <IntroCard title="ian makes things for the web">
+    	<p>I'm Ian and I wear many hats of many colours - though usually I'm found wearing my <b>front end developer</b> trilby or my <b>digital project manager</b> bowler. In my spare time I wear a photography beanie.</p>
+    </IntroCard>
+)
 
-export default IndexPage;
+export default IndexPage

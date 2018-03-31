@@ -1,6 +1,6 @@
-@import "../../global-styles/_settings";
-@import "../../global-styles/_settings.colours";
-@import "../../global-styles/_grid";
+@import "../../styles/_settings";
+@import "../../styles/_colours";
+@import "../../styles/_grid";
 
 
 @font-face {
@@ -86,3 +86,5 @@ body {
 		grid-column: two / six;
 	}
 }
+
+@import "../../styles/_power-classes";

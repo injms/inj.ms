@@ -8,8 +8,8 @@ import iconLinkedIn from '../../icons/linkedin.svg';
 import iconInstagram from '../../icons/instagram.svg';
 import iconImage from '../../icons/image.svg';
 
-import Button from '../Button/Button.jsx';
-import styles from './Card.module.scss';
+import Button from '../Button/';
+import styles from './IntroCard.module.scss';
 
 import avatar from '../../images/ian-james.jpg';
 import avatar2 from '../../images/ian-james@2x.jpg';

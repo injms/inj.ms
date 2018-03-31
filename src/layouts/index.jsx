@@ -1,7 +1,8 @@
-import React from 'react';
-import Helmet from 'react-helmet';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Helmet from 'react-helmet'
 
-import Card from '../components/Card/Card.jsx';
+import IntroCard from '../components/IntroCard'
 
 const title = `ian makes things for the web | inj.ms`;
 const description = `I'm Ian and I wear many hats of many colours - though usually I'm found wearing my front end developer trilby or my digital project manager bowler.`;
@@ -42,12 +43,14 @@ const link = [
 ];
 
 const TemplateWrapper = ({ children }) => (
-    <section>
-        <Helmet meta={metadata} link={link} title={title} /> 
-        <Card title={title.replace(' | inj.ms', '')}>
-            <p>I'm Ian and I wear many hats of many colours - though usually I'm found wearing my <b>front end developer</b> trilby or my <b>digital project manager</b> bowler. In my spare time I wear a photography beanie.</p>
-        </Card>
-    </section>
-);
+  <section>
+    <Helmet meta={metadata} link={link} title={title} /> 
+      {children()}
+  </section>
+)
+
+TemplateWrapper.propTypes = {
+  children: PropTypes.func,
+}
 
 export default TemplateWrapper

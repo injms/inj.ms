@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Link from 'gatsby-link';
+
+import IntroCard from '../components/IntroCard'
 
 const NotFoundPage = () => (
-  <section>
-    <h1>Page not found.</h1>
-    <p>You just found a page that doesn&#39;t exist&hellip; the sadness.</p>
-  </section>
+  <IntroCard title="Oh no - page not found">
+    <p>Not to worry - <Link to="/">back to the homepage</Link></p>
+  </IntroCard>
 )
 
 export default NotFoundPage
