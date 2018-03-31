@@ -31,8 +31,8 @@
 # Redirects
 # ------------------------------------------------------------------------------
 
-# [[redirects]]   
-#     from = "/inceptionhorn"
-#     to = "https://inception.davepedu.com/"
-#     status = 302
-#     force = false
+[[redirects]]   
+    from = "/inceptionhorn"
+    to = "https://inception.davepedu.com/"
+    status = 302
+    force = false
