@@ -5,7 +5,7 @@
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
     "gatsby": "^1.9.241",
-    "gatsby-link": "^1.6.39",
+    "gatsby-link": "^1.6.40",
     "gatsby-plugin-manifest": "^1.0.15",
     "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.8",
