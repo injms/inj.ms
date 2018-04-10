@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
-    "gatsby": "^1.9.241",
+    "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-manifest": "^1.0.17",
     "gatsby-plugin-offline": "^1.0.15",
