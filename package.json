@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm rebuild node-sass && gatsby build",
     "serve": "gatsby build && gatsby serve",
     "develop": "gatsby develop --host injms.test",
     "format": "prettier --write 'src/**/*.js'",
