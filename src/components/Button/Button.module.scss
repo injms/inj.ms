@@ -20,8 +20,9 @@
 
 	&:hover {
 	    background: #46a2ed linear-gradient(144deg, rgba(85, 249, 222, 0.7), rgba(70, 162, 237, 0.7), rgba(0, 95, 192, 0.1));
-	    border-image: #46a2ed linear-gradient(144deg, rgba(85, 249, 222, 0.7), rgba(70, 162, 237, 0.7), rgba(0, 95, 192, 0.1)) 1 1 1;
+            border-width: 0;
 	    color: #000000;
+            padding: 1.2em 1.7em;
 	}
 }
 
