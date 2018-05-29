@@ -19,8 +19,9 @@
 	transition: background-image 200ms ease-out;
 
 	&:hover {
-		background: $yellow linear-gradient(to top right, $red, $yellow);
-		background: #46A2ED linear-gradient(144deg, #55F9DE, #46A2ED, #005FC0);
+	    background: #46a2ed linear-gradient(144deg, rgba(85, 249, 222, 0.7), rgba(70, 162, 237, 0.7), rgba(0, 95, 192, 0.1));
+	    border-image: #46a2ed linear-gradient(144deg, rgba(85, 249, 222, 0.7), rgba(70, 162, 237, 0.7), rgba(0, 95, 192, 0.1)) 1 1 1;
+	    color: #000000;
 	}
 }
 
