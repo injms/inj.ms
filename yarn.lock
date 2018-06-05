@@ -3263,9 +3263,9 @@ gatsby-module-loader@^1.0.11:
     babel-runtime "^6.26.0"
     loader-utils "^0.2.16"
 
-gatsby-plugin-manifest@^1.0.22:
-  version "1.0.22"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.22.tgz#0b5088f3913d310160af759ba92bfbe819e6ad6a"
+gatsby-plugin-manifest@^1.0.25:
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.25.tgz#3879e22ad9791009356b1c465065c0d0261895e5"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
