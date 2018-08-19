@@ -1,0 +1,17 @@
+title: Ian makes things for the web.        # The title of the page
+main:                  # Our main part of the layout
+  - body.md            # This partial is located inside the same folder as this index.yml
+
+metadata:
+  description: I'm Ian and I wear many hats of many colours - though usually I'm found wearing my front end developer trilby or my digital project manager bowler.
+
+links:
+  - name: Github
+    icon: /assets/icons/github.svg
+    link: https://inj.ms/github
+  - name: LinkedIn
+    icon: /assets/icons/linkedin.svg
+    link: https://inj.ms/linkedin
+  - name: Instagram
+    icon: /assets/icons/instagram.svg
+    link: https://inj.ms/instagram
