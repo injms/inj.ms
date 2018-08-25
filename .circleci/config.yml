@@ -6,10 +6,9 @@ version: 2
 jobs:
   build:
     docker:
-      parallelism: 4
       # specify the version you desire here
-      - image: circleci/node:9.2.0
-      
+      - image: circleci/node:10.1.0
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -33,6 +32,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+
+      # install netlify cli
+      - run: wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
+      - run ./netlifycli --help
+
       # run tests!
-      - run: npm run test
+      - run: npm run netlify
