@@ -36,7 +36,8 @@ jobs:
       # install netlify cli
       - run: wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
       - run: ./netlifyctl --help
-      - run: ./netlifyctl --access-token 873cd258df4f73905b4041e41f05c38d89ebfaaff042c7ed7ca7c71a445c2ae5 deploy --draft --yes
+      - run: echo $NETLIFY_TOKEN
+
 
       # run tests!
       - run: npm run netlify
