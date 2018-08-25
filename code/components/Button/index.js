@@ -1,7 +1,6 @@
 import React from 'react';
 
 class Button extends React.Component {
-
     render() {
         return(
             <a href={this.props.to} className="button" >
@@ -9,9 +8,7 @@ class Button extends React.Component {
                 {this.props.name}
             </a>
         );
-
     }
-
 }
 
 export default Button;

@@ -4,16 +4,18 @@
   "version": "1.0.0",
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
+    "@sanity/client": "^0.132.8",
     "cuttlebelle": "^1.0.0-alpha.57",
+    "dotenv": "^6.0.0",
     "gulp": "^4.0.0",
     "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.1",
+    "prismjs": "^1.15.0"
   },
   "license": "UNLICENSED",
   "scripts": {
     "build": "cuttlebelle",
     "watch": "cuttlebelle -w",
-    "init": "cuttlebelle init",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
@@ -21,6 +23,12 @@
     "netlify": "npm run gulp:styles && npm run build"
   },
   "devDependencies": {
+    "husky": "^1.0.0-rc.13",
     "prettier": "^1.14.1"
+  },
+  "cuttlebelle": {
+		"folder": {
+			"code": "code/layout"
+		}
   }
 }

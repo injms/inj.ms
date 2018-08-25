@@ -53,16 +53,18 @@ body {
 	padding: 1em 0 0.5em 0;
 	text-transform: lowercase;
 
-	@media screen and (min-width: (700em / 16)) {
-		font-size: 5.7vw;
-	}
+	.index & {
+		@media screen and (min-width: (700em / 16)) {
+			font-size: 5.7vw;
+		}
 
-	@media screen and (min-width: (970em / 16)) {
-		font-size: 5.7vw;
-	}
+		@media screen and (min-width: (970em / 16)) {
+			font-size: 5.7vw;
+		}
 
-	@media screen and (min-width: (1440em / 16)) {
-		font-size: 3.8em;
+		@media screen and (min-width: (1440em / 16)) {
+			font-size: 3.8em;
+		}
 	}
 
 	img {
