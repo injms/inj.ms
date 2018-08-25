@@ -38,6 +38,5 @@ jobs:
       - run: ./netlifyctl --help
       - run: ./netlifyctl --access-token $NETLIFY_TOKEN deploy --draft --yes --debug
 
-
       # run tests!
       - run: npm run netlify
