@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 4
+version: 2
 jobs:
   build:
     docker:
@@ -36,7 +36,7 @@ jobs:
       # install netlify cli
       - run: wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
       - run: ./netlifyctl --help
-      - run: ./netlifyctl --access-token $NETLIFY_TOKEN deploy --draft --yes --debug
+      - run: ./netlifyctl deploy --access-token $NETLIFY_TOKEN --draft --yes --debug
 
       # run tests!
       - run: npm run netlify
