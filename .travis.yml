@@ -4,4 +4,4 @@ install:
   - wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
 script:
   - npm run netlify
-  - ./netlifyctl deploy --access-token $NETLIFY_TOKEN --draft --yes | grep 'netlify.com'
+  - npm run lighthouse -- $(./netlifyctl deploy --access-token $NETLIFY_TOKEN --draft --yes | grep 'netlify.com')
