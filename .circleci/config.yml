@@ -38,4 +38,4 @@ jobs:
 
       # run tests!
       - run: npm run netlify
-      - run: ./netlifyctl deploy --access-token $NETLIFY_TOKEN --draft --yes | grep 'netlify.com'
+      - run: ./netlifyctl deploy --access-token $NETLIFY_TOKEN --draft --yes
