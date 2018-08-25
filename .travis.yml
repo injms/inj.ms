@@ -1,0 +1,7 @@
+language: node_js
+install:
+  - npm install
+  - wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
+script:
+  - npm run netlify
+  - npm run lighthouse -- $(./netlifyctl deploy --access-token $NETLIFY_TOKEN --draft --yes | grep 'netlify.com')

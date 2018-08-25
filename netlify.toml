@@ -2,6 +2,9 @@
     publish = "site"
     command = "npm run netlify"
 
+[Settings]
+ID = "248ac887-23bb-4560-8e03-7a3cb290350e"
+
 # ------------------------------------------------------------------------------
 # Headers
 # ------------------------------------------------------------------------------
@@ -137,4 +140,4 @@
     to = "https://www.ianjamesphotography.com/copyright"
     status = 301
     force = false
-    
+
