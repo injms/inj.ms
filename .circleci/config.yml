@@ -36,7 +36,7 @@ jobs:
       # install netlify cli
       - run: wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
       - run: ls -la
-      - run: ./netlifycli --help
+      - run: ./netlifyctl --help
 
       # run tests!
       - run: npm run netlify
