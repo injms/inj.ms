@@ -2,6 +2,8 @@
 layout: head
 
 # the defaults
+siteName: inj.ms
+locale: en-GB
 themeColour: '#f9bf3b'
 twitter:
     cardType: summary
@@ -9,7 +11,6 @@ twitter:
     creator: '@_irj'
 opengraph:
     type: website
-    locale: en-GB
 rel:
     me:
         - https://www.ianjamesphotograpy.com
@@ -20,7 +21,7 @@ rel:
         - https://twitter.com/_irj
         - https://google.com/+IanJamesPhotography
     publisher:
-        - https://plus.google.com/+IanJamesPhotography"
+        - https://plus.google.com/+IanJamesPhotography
 ---
 
 This is the head.

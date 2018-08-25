@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 
 import Button from '../components/Button';
 
-/**
- * The Footer component
- */
 class Footer extends React.Component {
 	render() {
-		// const editedTitle = this.props.title.toLowerCase().replace(/\./, '') + ' | inj.ms';
 		return(
 			<footer className="ftr">
 				{
@@ -22,10 +18,7 @@ class Footer extends React.Component {
 };
 
 Footer.propTypes = {
-	/**
-	 * links: (partials)(4)
-	 */
-	links: PropTypes.node.isRequired,
+	links: PropTypes.array.isRequired,
 };
 
 Footer.defaultProps = {};
