@@ -19,15 +19,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "gulp:styles": "gulp styles",
-    "netlify": "npm run gulp:styles && npm run build"
+    "netlify": "npm run gulp:styles && npm run build",
+    "lighthouse": "lighthouse-ci"
   },
   "devDependencies": {
     "husky": "^1.0.0-rc.13",
+    "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
     "prettier": "^1.14.1"
   },
   "cuttlebelle": {
-		"folder": {
-			"code": "code/layout"
-		}
+    "folder": {
+      "code": "code/layout"
+    }
   }
 }
