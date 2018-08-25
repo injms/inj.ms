@@ -33,5 +33,9 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      # install netlify cli
+      - run: wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
+
       # run tests!
       - run: npm run netlify
+      - run: ./netlifyctl deploy --access-token $NETLIFY_TOKEN --draft --yes
