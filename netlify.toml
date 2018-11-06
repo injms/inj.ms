@@ -52,12 +52,6 @@ ID = "248ac887-23bb-4560-8e03-7a3cb290350e"
     force = false
 
 [[redirects]]
-    from = "/soip6"
-    to = "https://www.apple.com/iphone/world-gallery/"
-    status = 302
-    force = false
-
-[[redirects]]
     from = "/iubenda"
     to = "https://github.com/injms/iubenda-for-wp"
     status = 302
