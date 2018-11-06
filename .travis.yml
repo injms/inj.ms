@@ -1,7 +1,18 @@
 language: node_js
-install:
-  - npm install
-  - wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
-script:
-  - npm run netlify
-  - npm run lighthouse -- $(./netlifyctl deploy --access-token $NETLIFY_AUTH_TOKEN --draft --yes | grep 'netlify.com')
+
+stages:
+  - install
+  - compile
+  - name: lighthouse
+    if: type = pull_request
+    
+jobs:
+  include:
+    - stage: install
+      script: npm install
+    - stage: compile
+      script: npm run netlify
+    - stage: lighthouse
+      script:
+        - wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
+        - npm run lighthouse -- $(./netlifyctl deploy --access-token $NETLIFY_AUTH_TOKEN --draft --yes | grep 'netlify.com')
