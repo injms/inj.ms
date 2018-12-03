@@ -25,7 +25,7 @@
   "devDependencies": {
     "husky": "^1.2.0",
     "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
-    "prettier": "^1.15.2"
+    "prettier": "^1.15.3"
   },
   "cuttlebelle": {
     "folder": {
