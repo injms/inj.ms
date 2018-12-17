@@ -23,7 +23,7 @@
     "lighthouse": "lighthouse-ci"
   },
   "devDependencies": {
-    "husky": "^1.2.0",
+    "husky": "^1.2.1",
     "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
     "prettier": "^1.15.3"
   },
