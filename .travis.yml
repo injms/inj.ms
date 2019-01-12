@@ -6,4 +6,4 @@ script:
   - npm run netlify
   - npm run percy
   # - npm run lighthouse -- $(./netlifyctl deploy --access-token $NETLIFY_AUTH_TOKEN --draft --yes | grep 'netlify.com')
-  - npm run lighthouse
+  - bash ./run-lighthouse-test.sh
