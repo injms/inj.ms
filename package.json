@@ -20,7 +20,8 @@
     "gulp": "gulp",
     "gulp:styles": "gulp styles",
     "netlify": "npm run gulp:styles && npm run build",
-    "lighthouse": "lighthouse-ci"
+    "lighthouse": "lighthouse-ci",
+    "start": "cuttlebelle -w & gulp"
   },
   "devDependencies": {
     "husky": "^1.3.1",
