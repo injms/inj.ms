@@ -12,7 +12,7 @@ set -e
 TEST_SERVER_PID=$!
 
 # Run our tests.
-node ./percy.js
+percy exec -- node ./percy.js
 
 # Kill our backgrounded server (http-server expects a Ctrl+C, aka SIGINT)
 kill -SIGINT $TEST_SERVER_PID
