@@ -13,19 +13,25 @@
   },
   "license": "UNLICENSED",
   "scripts": {
-    "build": "cuttlebelle",
-    "watch": "cuttlebelle -w",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cuttlebelle",
+    "watch": "cuttlebelle -w",
     "gulp": "gulp",
     "gulp:styles": "gulp styles",
     "netlify": "npm run gulp:styles && npm run build",
-    "lighthouse": "lighthouse-ci"
+    "start": "cuttlebelle -w & gulp",
+    "lh": "lighthouse-ci",
+    "percy": "percy exec -- ./run-percy-tests.sh",
+    "lighthouse": "./run-lighthouse-test.sh"
   },
   "devDependencies": {
+    "@percy/puppeteer": "^1.0.0",
+    "http-server": "^0.11.1",
     "husky": "^1.3.1",
     "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "puppeteer": "^1.9.0"
   },
   "cuttlebelle": {
     "folder": {
