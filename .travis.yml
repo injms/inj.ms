@@ -1,10 +1,9 @@
 language: node_js
-addons:
-  chrome: stable
 install:
+  - gem install percy-cli
   - npm install
   - wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
 script:
   - npm run netlify
-  - bash ./run-percy-tests.sh
+  - percy snapshot site/
   - npm run lighthouse -- $(./netlifyctl deploy --access-token $NETLIFY_AUTH_TOKEN --draft --yes | grep 'netlify.com')

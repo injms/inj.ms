@@ -21,9 +21,7 @@
     "gulp:styles": "gulp styles",
     "netlify": "npm run gulp:styles && npm run build",
     "start": "cuttlebelle -w & gulp",
-    "lh": "lighthouse-ci",
-    "percy": "percy exec -- ./run-percy-tests.sh",
-    "lighthouse": "./run-lighthouse-test.sh"
+    "lighthouse": "lighthouse-ci"
   },
   "devDependencies": {
     "@percy/puppeteer": "^1.0.0",
