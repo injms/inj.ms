@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
-    "@percy/agent": "^0.1.7",
     "cuttlebelle": "^1.0.0-alpha.57",
     "dotenv": "^6.2.0",
     "gulp": "^4.0.0",
