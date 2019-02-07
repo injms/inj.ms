@@ -20,7 +20,7 @@
     "gulp": "gulp",
     "gulp:styles": "gulp styles",
     "netlify": "npm run gulp:styles && npm run build",
-    "lighthouse": "lighthouse-ci",
+    "lighthouse": "lighthousebot",
     "start": "cuttlebelle -w & gulp"
   },
   "devDependencies": {
