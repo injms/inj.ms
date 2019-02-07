@@ -20,13 +20,12 @@
     "gulp": "gulp",
     "gulp:styles": "gulp styles",
     "netlify": "npm run gulp:styles && npm run build",
-    "lighthouse": "lighthouse-ci",
+    "lighthouse": "lighthousebot",
     "start": "cuttlebelle -w & gulp"
   },
   "devDependencies": {
-    "husky": "^1.3.1",
-    "lighthouse-ci": "git+https://github.com/ebidel/lighthouse-ci.git",
-    "prettier": "^1.16.0"
+    "lighthousebot": "git+https://github.com/ebidel/lighthousebot.git",
+    "prettier": "^1.16.4"
   },
   "cuttlebelle": {
     "folder": {
