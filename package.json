@@ -9,7 +9,8 @@
     "gulp": "^4.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "prismjs": "^1.15.0"
+    "prismjs": "^1.15.0",
+    "snyk": "^1.126.0"
   },
   "license": "UNLICENSED",
   "scripts": {
@@ -21,7 +22,9 @@
     "gulp:styles": "gulp styles",
     "netlify": "npm run gulp:styles && npm run build",
     "lighthouse": "lighthousebot",
-    "start": "cuttlebelle -w & gulp"
+    "start": "cuttlebelle -w & gulp",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "lighthousebot": "git+https://github.com/ebidel/lighthousebot.git",
@@ -31,5 +34,6 @@
     "folder": {
       "code": "code/layout"
     }
-  }
+  },
+  "snyk": true
 }
