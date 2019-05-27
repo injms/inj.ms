@@ -10,7 +10,7 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "prismjs": "^1.16.0",
-    "snyk": "^1.144.0"
+    "snyk": "^1.167.2"
   },
   "license": "UNLICENSED",
   "scripts": {
