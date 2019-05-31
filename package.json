@@ -1,39 +1,48 @@
 {
   "name": "inj.ms",
   "description": "Website for inj.ms",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Ian James, https://inj.ms/github",
-  "dependencies": {
-    "cuttlebelle": "^1.0.0-alpha.60",
-    "dotenv": "^8.0.0",
-    "gulp": "^4.0.2",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "prismjs": "^1.16.0",
-    "snyk": "^1.161.1"
-  },
-  "license": "UNLICENSED",
   "scripts": {
-    "build": "cuttlebelle",
-    "watch": "cuttlebelle -w",
+    "dev": "sapper dev",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp",
-    "gulp:styles": "gulp styles",
-    "netlify": "npm run gulp:styles && npm run build",
+    "build": "sapper build --legacy",
+    "export": "sapper export --legacy",
+    "start": "node __sapper__/build",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "test": "run-p --race dev cy:run",
     "lighthouse": "lighthousebot",
-    "start": "cuttlebelle -w & gulp",
+    "netlify": "npm run export",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
+  "dependencies": {
+    "compression": "^1.7.1",
+    "dotenv": "^8.0.0",
+    "sirv": "^0.4.0",
+    "snyk": "^1.161.1",
+    "prismjs": "^1.16.0",
+    "polka": "^0.5.0"
+  },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "sapper": "^0.27.0",
+    "svelte": "^3.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "rollup": "^1.0.0",
+    "rollup-plugin-babel": "^4.0.2",
+    "rollup-plugin-commonjs": "^9.1.6",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-svelte": "^5.0.1",
+    "rollup-plugin-terser": "^4.0.4",
     "lighthousebot": "git+https://github.com/ebidel/lighthousebot.git",
     "prettier": "^1.17.1"
-  },
-  "cuttlebelle": {
-    "folder": {
-      "code": "code/layout"
-    }
   },
   "snyk": true
 }
