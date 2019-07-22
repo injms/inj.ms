@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
-    "cuttlebelle": "^1.0.0-alpha.66",
+    "cuttlebelle": "^1.0.0-alpha.67",
     "dotenv": "^8.0.0",
     "gulp": "^4.0.2",
     "gulp-rename": "^1.4.0",
