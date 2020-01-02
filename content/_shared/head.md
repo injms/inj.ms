@@ -19,6 +19,8 @@ rel:
         - https://instagram.com/inj.ms
         - https://github.com/injms
         - https://twitter.com/_injms_
+    publisher:
+        - https://inj.ms
 ---
 
 This is the head.
