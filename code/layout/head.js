@@ -47,6 +47,7 @@ class Head extends React.Component {
                         return <link rel="publisher" href={ url } />
                     })
                 }
+	 	<meta name="p:domain_verify" content="80746af448e9e3c81111669178cc05eb">
             </head>
 		);
     }
