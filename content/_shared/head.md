@@ -18,10 +18,9 @@ rel:
         - https://inj.ms
         - https://instagram.com/inj.ms
         - https://github.com/injms
-        - https://twitter.com/_irj
-        - https://google.com/+IanJamesPhotography
+        - https://twitter.com/_injms_
     publisher:
-        - https://plus.google.com/+IanJamesPhotography
+        - https://inj.ms
 ---
 
 This is the head.
