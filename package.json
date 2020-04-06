@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "lighthousebot": "git+https://github.com/ebidel/lighthousebot.git",
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.3"
   },
   "cuttlebelle": {
     "folder": {
