@@ -1,1 +1,0 @@
-I'm Ian and I wear many hats of many colours - though usually I'm found wearing my **front end developer** trilby or my **digital project manager** bowler. In my spare time I wear a **photography** beanie.
