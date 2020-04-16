@@ -12,7 +12,7 @@ ID = "248ac887-23bb-4560-8e03-7a3cb290350e"
 [[headers]]
     for = "/*"
     [headers.values]
-        Content-Security-Policy = "default-src 'self' ; script-src 'self' ; style-src 'self' ; img-src 'self' ; upgrade-insecure-requests; block-all-mixed-content; report-uri https://injms.report-uri.com/r/d/csp/enforce"
+        Content-Security-Policy = "default-src 'self' ; script-src 'self' ; style-src 'unsafe-inline' ; img-src 'self' ; upgrade-insecure-requests; block-all-mixed-content; report-uri https://injms.report-uri.com/r/d/csp/enforce"
         Expect-CT = "max-age=0, report-uri='https://injms.report-uri.com/r/d/ct/reportOnly'"
         Referrer-Policy = "strict-origin-when-cross-origin"
         X-Content-Type-Options = "nosniff"
