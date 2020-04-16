@@ -2,9 +2,6 @@ language: node_js
 install:
   - npm install
   - gem install percy-cli
-  # - wget -qO- 'https://cli.netlify.com/download/latest/linux' | tar xz
-  - curl -L 'https://cli.netlify.com/download/latest/linux' | tar xz
 script:
   - npm run netlify
   - percy snapshot site
-  - npm run lighthouse -- $(./netlifyctl deploy --access-token $NETLIFY_AUTH_TOKEN --draft --yes | grep 'netlify.com')
