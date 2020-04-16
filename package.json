@@ -1,39 +1,26 @@
 {
   "name": "inj.ms",
   "description": "Website for inj.ms",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
-    "cuttlebelle": "^1.0.0-alpha.69",
-    "dotenv": "^8.2.0",
-    "gulp": "^4.0.2",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "prismjs": "^1.19.0",
+    "@11ty/eleventy": "^0.10.0",
+    "clean-css": "^4.2.3",
     "snyk": "^1.305.0"
   },
   "license": "UNLICENSED",
   "scripts": {
-    "build": "cuttlebelle",
-    "watch": "cuttlebelle -w",
-    "format": "prettier --write 'src/**/*.js'",
+    "build": "eleventy",
+    "watch": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp",
-    "gulp:styles": "gulp styles",
-    "netlify": "npm run gulp:styles && npm run build",
+    "netlify": "npm run build",
     "lighthouse": "lighthousebot",
-    "start": "cuttlebelle -w & gulp",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "lighthousebot": "git+https://github.com/ebidel/lighthousebot.git",
     "prettier": "^2.0.2"
-  },
-  "cuttlebelle": {
-    "folder": {
-      "code": "code/layout"
-    }
   },
   "snyk": true
 }
