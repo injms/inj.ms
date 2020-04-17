@@ -15,7 +15,6 @@
     "netlify": "npm run build"
   },
   "devDependencies": {
-    "lighthousebot": "git+https://github.com/ebidel/lighthousebot.git",
     "prettier": "^2.0.2"
   }
 }
