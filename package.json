@@ -5,22 +5,17 @@
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "clean-css": "^4.2.3",
-    "snyk": "^1.305.0"
+    "clean-css": "^4.2.3"
   },
   "license": "UNLICENSED",
   "scripts": {
     "build": "eleventy",
     "watch": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "netlify": "npm run build",
-    "lighthouse": "lighthousebot",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "netlify": "npm run build"
   },
   "devDependencies": {
     "lighthousebot": "git+https://github.com/ebidel/lighthousebot.git",
     "prettier": "^2.0.2"
-  },
-  "snyk": true
+  }
 }
