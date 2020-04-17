@@ -1,6 +1,6 @@
-name: Check if builds okay
+name: Visual regression test
 
-on: [push]
+on: [pull_request]
 
 jobs:
   build:
@@ -22,8 +22,9 @@ jobs:
       run: npm ci
     - name: build
       run: npm run build
-    - name: save built site
-      uses: actions/upload-artifact@v1
+    - name: percy
+      uses: percy/snapshot-action@v0.1.0
       with:
-        name: built-site
-        path: site
+        build-directory: "site/"
+      env:
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
