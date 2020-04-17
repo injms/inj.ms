@@ -1,7 +1,0 @@
-language: node_js
-install:
-  - npm install
-  - gem install percy-cli
-script:
-  - npm run netlify
-  - percy snapshot site
