@@ -139,19 +139,3 @@ body {
 .button__image {
   margin: 0 1em 0 0;
 }
-
-/* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
-.vh {
-  clip: rect(1px, 1px, 1px, 1px);
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  position: absolute !important;
-}
-.vh a:focus,
-.vh input:focus,
-.vh button:focus {
-  height: auto;
-  position: static;
-  width: auto;
-}
