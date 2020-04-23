@@ -8,3 +8,6 @@ yarn-error.log
 public
 site
 assets/css
+
+# Local Netlify folder
+.netlify
