@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'rubikmedium';
+  font-weight: bold;
   font-display: swap;
   src: url('/assets/fonts/rubik-medium.woff2') format('woff2'), url('/assets/fonts/rubik-medium.woff') format('woff');
 }
@@ -66,9 +67,7 @@ body {
 
 .intro {
   color: #141e30;
-  font: normal 3em / 1 'rubikmedium', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+  font: bold 3em / 1 'rubikmedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   margin: 0;
   padding: 1em 0 0.5em 0;
   text-transform: lowercase;
