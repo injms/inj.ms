@@ -28,17 +28,17 @@ module.exports = {
   },
   footer: {
     links: [
-      { 
+      {
         name: 'Github',
         icon: '/assets/icons/github.svg',
         href: 'https://inj.ms/github',
       },
-      { 
+      {
         name: 'LinkedIn',
         icon: '/assets/icons/linkedin.svg',
         href: 'https://inj.ms/linkedin',
       },
-      { 
+      {
         name: 'Instagram',
         icon: '/assets/icons/instagram.svg',
         href: 'https://inj.ms/instagram',
