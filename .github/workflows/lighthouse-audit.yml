@@ -3,7 +3,7 @@ name: Lighthouse audit
 on: [pull_request]
 
 jobs:
-  audit:
+  audit_pull_request:
     runs-on: ubuntu-latest
     steps:
     - name: Audit Netlify deploy preview
@@ -12,16 +12,27 @@ jobs:
         netlify_site: 'injms.netlify.app'
     - uses: actions/upload-artifact@master
       with:
-        name: lighthouse-report
+        name: lighthouse-report-pr
+        path: './report'
+  audit_live:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Audit Netlify deploy preview
+      uses: jakejarvis/lighthouse-action@master
+      with:
+        url: 'https://inj.ms'
+    - uses: actions/upload-artifact@master
+      with:
+        name: lighthouse-report-live
         path: './report'
   add_comment:
     runs-on: ubuntu-latest
-    needs: audit
+    needs: [ audit_pull_request, audit_live ]
     steps:
     - name: download artifact
       uses: actions/download-artifact@v1
       with:
-        name: lighthouse-report
+        name: lighthouse-report-pr
         path: './'
     - name: install jq and bc
       run: sudo apt-get install jq bc
