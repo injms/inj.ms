@@ -6,13 +6,10 @@ jobs:
   audit_pull_request:
     runs-on: ubuntu-latest
     steps:
-    - name: concatenate the contents of $GITHUB_EVENT_PATH
-      run: |
-        echo $GITHUB_EVENT_PATH
-        cat $GITHUB_EVENT_PATH
-    # - name: Lighthouse audit and comment test
-    #   uses: injms/lighthouse-and-comment-action@beta
-    #   with:
-    #     live_url: "https://inj.ms"
-    #     pr_url_pattern: "https://deploy-preview-{{PULL_REQUEST_NUMBER}}--injms.netlify.app"
-    #     pages: '["/","/?test"]'
+    - name: Lighthouse audit pr and comment
+      uses: injms/lighthouse-and-comment-action@v1
+      with:
+        live_url: "https://inj.ms"
+        pr_url_pattern: "https://deploy-preview-{{PULL_REQUEST_NUMBER}}--injms.netlify.app"
+        pages: '["/","/?test"]'
+        myToken: ${{ secrets.GITHUB_TOKEN }}
