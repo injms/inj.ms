@@ -1,58 +1,15 @@
 name: Lighthouse audit
 
-on: [pull_request]
+on: pull_request
 
 jobs:
-  audit:
+  lighthouse-audit:
     runs-on: ubuntu-latest
     steps:
-    - name: Audit Netlify deploy preview
-      uses: jakejarvis/lighthouse-action@master
-      with:
-        netlify_site: 'injms.netlify.app'
-    - uses: actions/upload-artifact@master
-      with:
-        name: lighthouse-report
-        path: './report'
-  add_comment:
-    runs-on: ubuntu-latest
-    needs: audit
-    steps:
-    - name: download artifact
-      uses: actions/download-artifact@v1
-      with:
-        name: lighthouse-report
-        path: './'
-    - name: install jq and bc
-      run: sudo apt-get install jq bc
-    - name: cat report
-      run: |
-        PATH_TO_REPORT=$(cat ./*.json)
-        echo $PATH_TO_REPORT
-    - name: get results
-      run: |
-        PATH_TO_REPORT=$(ls *.report.json)
-
-        SCORE_PERFORMANCE=$(jq '.categories["performance"].score' $PATH_TO_REPORT)
-        SCORE_ACCESSIBILITY=$(jq '.categories["accessibility"].score' $PATH_TO_REPORT)
-        SCORE_PRACTICES=$(jq '.categories["best-practices"].score' $PATH_TO_REPORT)
-        SCORE_SEO=$(jq '.categories["seo"].score' $PATH_TO_REPORT)
-        SCORE_PWA=$(jq '.categories["pwa"].score' $PATH_TO_REPORT)
-
-        cat <<EOT >> table.md
-        | Category | New result |
-        |-|-|
-        | Performance | $(echo "$SCORE_PERFORMANCE*100" | bc -l) |
-        | Accessibility | $(echo "$SCORE_ACCESSIBILITY*100" | bc -l) |
-        | Best practices | $(echo "$SCORE_PRACTICES*100" | bc -l) |
-        | SEO | $(echo "$SCORE_SEO*100" | bc -l) |
-        | Progressive Web App | $(echo "$SCORE_PWA*100" | bc -l) |
-        EOT
-
-    - name: comment on pull request
-      uses: injms/comment-on-pr@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        msg: ./table.md
-        check_for_duplicate_msg: false
+      - name: Lighthouse audits
+        uses: injms/lighthouse-and-comment-action@primary
+        with:
+          live_url: "https://inj.ms"
+          pr_url_pattern: "https://deploy-preview-{{PULL_REQUEST_NUMBER}}--injms.netlify.app"
+          pages: '["/"]'
+          github_token: ${{ secrets.GITHUB_TOKEN }}

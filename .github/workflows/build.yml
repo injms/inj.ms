@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         platform: [ubuntu-latest]
-        node-version: [13.x]
+        node-version: [13.x, 14.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -22,8 +22,3 @@ jobs:
       run: npm ci
     - name: build
       run: npm run build
-    - name: save built site
-      uses: actions/upload-artifact@v1
-      with:
-        name: built-site
-        path: site
