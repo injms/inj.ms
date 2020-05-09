@@ -19,33 +19,43 @@
   max-width: 90em;
 }
 
-@media screen and (min-width: 37.5em) {
+@media (min-width: 37.5em) {
   .grid {
     font-size: 1.125em;
     max-width: 80em;
   }
 }
 
-@media screen and (min-width: 50em) {
+@media (min-width: 50em) {
   .grid {
     font-size: 1.25em;
     max-width: 72em;
   }
 }
 
-body {
-  background: #f0f0f0;
+html {
+  box-sizing: border-box;
+  border: 1em solid #ffffff;
+  min-height: 100%;
+}
+
+@media screen {
+  body {
+    background: #eeeeee;
+  }
 }
 
 .hdr {
   grid-column: one / four;
 }
-@media screen and (min-width: 37.5em) {
+
+@media (min-width: 37.5em) {
   .hdr {
     grid-column: one / three;
   }
 }
-@media screen and (min-width: 50em) {
+
+@media (min-width: 50em) {
   .hdr {
     grid-column: one / two;
   }
@@ -54,7 +64,8 @@ body {
 .wrapper {
   grid-column: one / five;
 }
-@media screen and (min-width: 43.75em) {
+
+@media (min-width: 43.75em) {
   .wrapper {
     grid-column: two / three;
   }
@@ -72,17 +83,20 @@ body {
   padding: 1em 0 0.5em 0;
   text-transform: lowercase;
 }
-@media screen and (min-width: 43.75em) {
+
+@media (min-width: 43.75em) {
   .index .intro {
     font-size: 5.7vw;
   }
 }
-@media screen and (min-width: 60.625em) {
+
+@media (min-width: 60.625em) {
   .index .intro {
     font-size: 5.7vw;
   }
 }
-@media screen and (min-width: 90em) {
+
+@media (min-width: 90em) {
   .index .intro {
     font-size: 3.8em;
   }
@@ -103,7 +117,8 @@ body {
   padding: 2em 0;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 43.75em) {
+
+@media (min-width: 43.75em) {
   .ftr {
     grid-column: two / six;
   }
@@ -133,6 +148,22 @@ body {
 
 .button:hover {
   background: #05eafa;
+}
+
+@media print {
+  .ftr {
+    display: block;
+  }
+
+  .button {
+    border: 0;
+  }
+
+  .button::after {
+    content: attr(href);
+    margin-left: 1em;
+    text-decoration: underline;
+  }
 }
 
 .button__image {
