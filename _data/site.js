@@ -1,7 +1,7 @@
-module.exports = {
+const site = {
   // all the defaults
   locale: 'en-GB',
-  baseURL: 'https://inj.ms',
+  baseURL: process.env.DEPLOY_PRIME_URL ? process.env.DEPLOY_PRIME_URL : 'https://inj.ms',
   siteName: 'inj.ms',
   siteTitle: 'Ian makes things for the web',
   themeColour: '#f9bf3b',
@@ -46,3 +46,5 @@ module.exports = {
     ]
   },
 }
+
+module.exports = site
