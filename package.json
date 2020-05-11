@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "Ian James, https://inj.ms/github",
   "dependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.11.0",
     "clean-css": "^4.2.3"
   },
   "license": "UNLICENSED",
