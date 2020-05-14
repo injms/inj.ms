@@ -1,9 +1,7 @@
 const site = {
   // all the defaults
   locale: 'en-GB',
-  baseURL: process.env.DEPLOY_PRIME_URL ? process.env.DEPLOY_PRIME_URL : 'https://inj.ms',
-  siteName: 'inj.ms',
-  siteTitle: 'Ian makes things for the web',
+  baseURL: process.env.CONTEXT === 'production' ? 'https://inj.ms' : process.env.DEPLOY_PRIME_URL,
   themeColour: '#f9bf3b',
   twitter: {
     cardType: 'summary',
