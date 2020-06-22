@@ -12,7 +12,8 @@
     "build": "eleventy",
     "watch": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "netlify": "npm run build"
+    "netlify": "npm run build",
+    "start": "eleventy --serve"
   },
   "devDependencies": {
     "prettier": "^2.0.5"
