@@ -8,13 +8,9 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter("cssmin", (code) => new CleanCSS({}).minify(code).styles)
 
   eleventyConfig.setBrowserSyncConfig({
-    https: {
-        key: '../localhost-key.pem',
-        cert: '../localhost.pem',
-    },
     callbacks: {
-     ready: function(err, bs) {
-       bs.addMiddleware('*', (req, res) => {
+     ready: (_err, bs) => {
+       bs.addMiddleware('*', (_req, res) => {
         res.writeHead(404)
 
         // We read this for every 404, otherwise it'll be cached. That's
@@ -26,7 +22,12 @@ module.exports = (eleventyConfig) => {
         res.end()
       })
      }
-    }
+    },
+    https: {
+        key: '../localhost-key.pem',
+        cert: '../localhost.pem',
+    },
+    ui: false,
   })
 
   return {
