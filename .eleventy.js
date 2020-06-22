@@ -1,11 +1,13 @@
 const fs = require('fs')
-const CleanCSS = require("clean-css");
+
+const cssmin = require('./nunjuck-filters/cssmin')
 
 module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy('assets')
 
-  eleventyConfig.addFilter("cssmin", (code) => new CleanCSS({}).minify(code).styles)
+  // Minifies CSS
+  eleventyConfig.addFilter("cssmin", (code) => cssmin(code) )
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
