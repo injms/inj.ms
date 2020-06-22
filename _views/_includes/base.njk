@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+  <head>
+    <meta charset="utf-8">
+
+    <title>{{ title | lower }}</title>
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="rating" content="general">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="{{ site.themeColour }}">
+
+    <link rel="canonical" href="{{ site.baseURL }}{{ page.url }}">
+
+    <meta name="description" content="{{ metadata.description }}">
+
+    <meta name="twitter:card" content="{{ site.twitter.cardType }}">
+    <meta name="twitter:site" content="{{ site.twitter.site }}">
+    <meta name="twitter:creator" content="{{ site.twitter.creator }}">
+    <meta name="twitter:url" content="{{ site.baseURL }}{{ page.url }}">
+    <meta name="twitter:title" content="{{ site.siteTitle }}">
+    <meta name="twitter:description" content="{{ metadata.description }}">
+
+    <meta property="og:url" content="{{ site.baseURL }}{{ page.url }}">
+    <meta property="og:type" content="{{ site.opengraph.type }}">
+    <meta property="og:site_name" content="{{ metadata.siteTitle }}">
+    <meta property="og:locale" content="{{ site.locale }}">
+    <meta property="og:description" content="{{ site.description }}">
+
+    {% for k, values in site.rel %}
+      {% for value in values %}
+        <link rel="{{ k }}" href="{{ value }}">
+      {% endfor %}
+    {% endfor %}
+
+    <meta name="p:domain_verify" content="80746af448e9e3c81111669178cc05eb">
+
+    {%- set css %}
+    {% include "../../assets/styles/all.css" %}
+    {% endset %}
+    <style>
+      {{css | cssmin | safe}}
+    </style>
+  </head>
+
+  <body class="index grid">
+    {% block header %}
+      <header class="hdr">
+        <h1 class="intro">{% if photo %}<img src="{{ photo.src }}" srcset="{{ photo.srcSet }}" sizes="1.11em" alt="{{ photo.alt }}" aria-hidden="true" role="presentation">{% endif %}{{ title }}</h1>
+      </header>
+    {% endblock %}
+
+    {% block content %}
+      <section class="wrapper">
+        {{ content | safe }}
+      </section>
+    {% endblock %}
+
+    {% block footer %}
+      <footer class="ftr">
+        {% for link in site.footer.links %}
+          <a href="{{ link.href }}" class="button">
+            <img alt="" aria-hidden="true" role="presentation" src="{{ link.icon }}" width="40" height="40" class="button__image">
+            {{ link.name }}
+          </a>
+        {% endfor %}
+      </footer>
+    {% endblock %}
+  </body>
+</html>
