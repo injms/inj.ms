@@ -5,9 +5,7 @@ yarn-error.log
 .env
 
 # Build directory
-public
 site
-assets/css
 
 # Local Netlify folder
 .netlify
