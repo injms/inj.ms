@@ -13,8 +13,8 @@ const months = [
   'December',
 ]
 /**
- * @param  {number} n
- * @return {string} ordinal
+ * @param  {number} n Number that we want an ordinal for (1 will need `st`, 2 -> `nd`)
+ * @return {string} bare ordinal - for example `th`, `nd`
  */
 const ordinal = (n) => {
   if (n >= 4 && n <= 20) {
@@ -53,7 +53,12 @@ const formatDate = (date, format) => {
     case 'iso':
       return parsedDate.toISOString()
     case 'human':
-      return `${parsedDate.getDate()}${ordinal(parsedDate.getDate())} ${months[parsedDate.getMonth()]} ${parsedDate.getFullYear()}`
+      return parsedDate.getDate() +
+        ordinal(parsedDate.getDate()) +
+        ' ' +
+        months[parsedDate.getMonth()] +
+        ' ' +
+        parsedDate.getFullYear()
     }
   } catch (error) {
     console.error(error)
