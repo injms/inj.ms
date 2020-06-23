@@ -1,5 +1,5 @@
 const debug = (thing) => {
-  console.log( JSON.stringify(thing) )
+  console.log(JSON.stringify(thing))
   return thing
 }
 

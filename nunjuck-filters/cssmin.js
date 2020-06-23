@@ -1,4 +1,4 @@
-const CleanCSS = require("clean-css")
+const CleanCSS = require('clean-css')
 
 const options = {
   level: 2,

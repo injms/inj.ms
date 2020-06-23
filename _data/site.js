@@ -22,7 +22,7 @@ const site = {
     ],
     publisher: [
       'https://inj.ms',
-    ]
+    ],
   },
   footer: {
     links: [
@@ -41,7 +41,7 @@ const site = {
         icon: '/assets/icons/instagram.svg',
         href: 'https://inj.ms/instagram',
       },
-    ]
+    ],
   },
 }
 
