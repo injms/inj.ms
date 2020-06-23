@@ -3,6 +3,7 @@ const fs = require('fs')
 const cssmin = require('./nunjuck-filters/cssmin')
 const debug = require('./nunjuck-filters/debug')
 const formatdate = require('./nunjuck-filters/formatdate')
+const md = require('./nunjuck-filters/markdownify')
 
 module.exports = (eleventyConfig) => {
 
@@ -18,6 +19,8 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter('humanDate', (date) => formatdate(date, 'human') )
   eleventyConfig.addFilter('isoDate', (date) => formatdate(date, 'iso') )
 
+  // Turn a string from markdown to HTML
+  eleventyConfig.addFilter('markdownify', (markdown) => md.render(markdown) )
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
