@@ -10,9 +10,9 @@ jobs:
 
     strategy:
       matrix:
-        platform: [ ubuntu-latest ]
+        platform:
+         - ubuntu-latest
         node-version:
-         - 13.x
          - 14.x
 
     steps:

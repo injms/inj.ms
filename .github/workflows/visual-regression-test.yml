@@ -1,16 +1,19 @@
 name: Visual regression test
 
-on: [pull_request]
+on:
+ - pull_request
 
 jobs:
-  build:
-    name: Build check
+  run-tests:
+    name: Run tests
     runs-on: ${{ matrix.platform }}
 
     strategy:
       matrix:
-        platform: [ubuntu-latest]
-        node-version: [13.x]
+        platform:
+         - ubuntu-latest
+        node-version:
+         - 14.x
 
     steps:
     - uses: actions/checkout@v1
