@@ -1,9 +1,9 @@
-name: Lighthouse audit
+name: Lighthouse performance audit
 
 on: pull_request
 
 jobs:
-  lighthouse-audit:
+  audit:
     runs-on: ubuntu-latest
     steps:
       - name: Lighthouse audits

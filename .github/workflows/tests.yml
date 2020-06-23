@@ -1,16 +1,17 @@
-name: Check if builds okay
+name: JavaScript tests
 
 on:
  - push
 
 jobs:
-  build:
-    name: Build check
+  run-filter-unit-tests:
+    name: Run filter unit tests
     runs-on: ${{ matrix.platform }}
 
     strategy:
       matrix:
-        platform: [ ubuntu-latest ]
+        platform:
+         - ubuntu-latest
         node-version:
          - 13.x
          - 14.x
@@ -23,5 +24,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install
       run: npm ci
-    - name: build
-      run: npm run build
+    - name: test
+      run: npm test
