@@ -2,6 +2,7 @@ const fs = require('fs')
 
 const cssmin = require('./nunjuck-filters/cssmin')
 const debug = require('./nunjuck-filters/debug')
+const formatdate = require('./nunjuck-filters/formatdate')
 
 module.exports = (eleventyConfig) => {
 
@@ -12,6 +13,11 @@ module.exports = (eleventyConfig) => {
 
   // Passes things along to console log and returns without altering
   eleventyConfig.addFilter('debug', (s) => debug(s) )
+
+  // Display dates in reasonable formats
+  eleventyConfig.addFilter('humanDate', (date) => formatdate(date, 'human') )
+  eleventyConfig.addFilter('isoDate', (date) => formatdate(date, 'iso') )
+
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
