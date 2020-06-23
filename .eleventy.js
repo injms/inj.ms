@@ -1,6 +1,7 @@
 const fs = require('fs')
 
 const cssmin = require('./nunjuck-filters/cssmin')
+const debug = require('./nunjuck-filters/debug')
 
 module.exports = (eleventyConfig) => {
 
@@ -8,6 +9,9 @@ module.exports = (eleventyConfig) => {
 
   // Minifies CSS
   eleventyConfig.addFilter("cssmin", (code) => cssmin(code) )
+
+  // Passes things along to console log and returns without altering
+  eleventyConfig.addFilter('debug', (s) => debug(s) )
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
