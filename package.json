@@ -8,8 +8,16 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "autoprefixer": "^9.8.4",
     "clean-css": "^4.2.3",
-    "markdown-it": "^11.0.0"
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "markdown-it": "^11.0.0",
+    "sass": "^1.26.9"
   },
   "license": "UNLICENSED",
   "scripts": {
