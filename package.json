@@ -26,7 +26,7 @@
     "compile:sass": "gulp compile",
     "lint": "npm run lint:javascript && npm run lint:sass",
     "lint:javascript": "eslint --config='.eslintrc.yaml' '**/*.js'",
-    "lint:sass": "stylelint '**/*.scss' --cache=true --report-needless-disables",
+    "lint:sass": "stylelint '**/*.scss' --cache=true",
     "netlify": "npm run build",
     "start": "eleventy --serve",
     "test": "npm run test:javascript",
