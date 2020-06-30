@@ -20,14 +20,14 @@
     <meta name="twitter:site" content="{{ site.twitter.site }}">
     <meta name="twitter:creator" content="{{ site.twitter.creator }}">
     <meta name="twitter:url" content="{{ site.baseURL }}{{ page.url }}">
-    <meta name="twitter:title" content="{{ site.siteTitle }}">
+    <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:description" content="{{ metadata.description }}">
 
     <meta property="og:url" content="{{ site.baseURL }}{{ page.url }}">
     <meta property="og:type" content="{{ site.opengraph.type }}">
-    <meta property="og:site_name" content="{{ metadata.siteTitle }}">
-    <meta property="og:locale" content="{{ site.locale }}">
-    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:site_name" content="{{ title }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ metadata.description }}">
 
     {% for k, values in site.rel %}
       {% for value in values %}
