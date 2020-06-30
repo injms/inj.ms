@@ -25,3 +25,5 @@ jobs:
       run: npm ci
     - name: Lint JavaScript
       run: npm run lint:javascript
+    - name: Lint Sass
+      run: npm run lint:sass

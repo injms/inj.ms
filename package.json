@@ -24,7 +24,9 @@
     "build": "npm run compile:sass && npm run build:site",
     "build:site": "eleventy",
     "compile:sass": "gulp compile",
+    "lint": "npm run lint:javascript && npm run lint:sass",
     "lint:javascript": "eslint --config='.eslintrc.yaml' '**/*.js'",
+    "lint:sass": "stylelint '**/*.scss' --cache=true --report-needless-disables",
     "netlify": "npm run build",
     "start": "eleventy --serve",
     "test": "npm run test:javascript",
@@ -41,6 +43,9 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "mocha": "^8.0.1",
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0"
   }
 }
