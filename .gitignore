@@ -12,3 +12,6 @@ assets/styles
 
 # Local Netlify folder
 .netlify
+
+# Caches
+.stylelintcache
