@@ -2,6 +2,12 @@
     publish = "site"
     command = "npm run netlify"
 
+[context.production.environment]
+    NODE_ENV = "production"
+
+[context.deploy-preview.environment]
+    NODE_ENV = "production"
+
 [Settings]
 ID = "248ac887-23bb-4560-8e03-7a3cb290350e"
 
@@ -134,4 +140,3 @@ ID = "248ac887-23bb-4560-8e03-7a3cb290350e"
     to = "https://www.ianjamesphotography.com/copyright"
     status = 301
     force = false
-
