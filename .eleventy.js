@@ -1,9 +1,13 @@
 const fs = require('fs')
+const { format: prettier } = require('prettier')
+const { minify: htmlMinifier } = require('html-minifier')
 
 const cssmin = require('./nunjuck-filters/cssmin')
 const debug = require('./nunjuck-filters/debug')
 const formatdate = require('./nunjuck-filters/formatdate')
 const md = require('./nunjuck-filters/markdownify')
+
+const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy('assets')
@@ -20,6 +24,25 @@ module.exports = (eleventyConfig) => {
 
   // Turn a string from markdown to HTML
   eleventyConfig.addFilter('markdownify', (markdown) => md.render(markdown))
+
+  // Prettifys HTML
+  eleventyConfig.addTransform('html', (content, outputPath) => {
+    if (outputPath.endsWith('.html')) {
+      if (isProduction === true) {
+        return htmlMinifier(content, {
+          collapseWhitespace: true,
+          removeRedundantAttributes: true,
+          sortAttributes: true,
+          sortClassName: true,
+        })
+      }
+
+      return prettier(content, {
+        parser: 'html',
+      })
+    }
+    return content
+  })
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
