@@ -2,6 +2,7 @@ name: Visual regression test
 
 on:
  - pull_request
+ - push
 
 jobs:
   run-tests:
