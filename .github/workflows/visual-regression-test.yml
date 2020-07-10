@@ -5,7 +5,7 @@ on:
 
 jobs:
   run-tests:
-    name: Run tests
+    name: Run visual regression tests
     runs-on: ${{ matrix.platform }}
 
     strategy:
