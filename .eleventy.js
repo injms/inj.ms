@@ -10,6 +10,7 @@ const md = require('./nunjuck-filters/markdownify')
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.setUseGitIgnore(false)
   eleventyConfig.addPassthroughCopy('assets')
 
   // Minifies CSS

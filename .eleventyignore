@@ -1,0 +1,17 @@
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+.env
+
+# Build directory
+site
+
+# Local Netlify folder
+.netlify
+
+# Caches
+.stylelintcache
+
+# Ignore any Sass file changes so build is triggered when the CSS has been built
+**/*.scss
