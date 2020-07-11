@@ -45,21 +45,21 @@
     </style>
   </head>
 
-  <body class="index grid">
+  <body>
     {% block header %}
-      <header class="hdr">
+      <header class="hdr wrapper">
         <h1 class="intro">{% if photo %}<img src="{{ photo.src }}" srcset="{{ photo.srcSet }}" sizes="1.11em" alt="{{ photo.alt }}" aria-hidden="true" role="presentation">{% endif %}{{ title }}</h1>
       </header>
     {% endblock %}
 
     {% block content %}
-      <section class="wrapper">
+      <section class="wrapper block">
         {{ content | safe }}
       </section>
     {% endblock %}
 
     {% block footer %}
-      <footer class="ftr">
+      <footer class="ftr wrapper">
         {% for link in site.footer.links %}
           <a href="{{ link.href }}" class="button">
             <img alt="" aria-hidden="true" role="presentation" src="{{ link.icon }}" width="40" height="40" class="button__image">
