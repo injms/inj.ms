@@ -18,7 +18,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "html-minifier": "^4.0.0",
     "markdown-it": "^11.0.0",
-    "sass": "^1.26.9"
+    "sass": "^1.26.10"
   },
   "license": "UNLICENSED",
   "scripts": {
