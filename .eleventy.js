@@ -14,18 +14,21 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy('assets')
 
-  // Minifies CSS
+  // Minifies CSS.
   eleventyConfig.addFilter('cssmin', (code) => cssmin(code))
 
-  // Passes things along to console log and returns without altering
+  // Passes things along to console log and returns without altering.
   eleventyConfig.addFilter('debug', (s) => debug(s))
 
-  // Display dates in reasonable formats
+  // Display dates in reasonable formats.
   eleventyConfig.addFilter('humanDate', (date) => formatdate(date, 'human'))
   eleventyConfig.addFilter('isoDate', (date) => formatdate(date, 'iso'))
 
-  // Turn a string from markdown to HTML
+  // Turn a string from Markdown to HTML.
   eleventyConfig.addFilter('markdownify', (markdown) => md.render(markdown))
+
+  // Use the same Markdown settings for Eleventy as the Nunjucks filter.
+  eleventyConfig.setLibrary('md', md)
 
   // Prettifys HTML
   eleventyConfig.addTransform('html', (content, outputPath) => {
