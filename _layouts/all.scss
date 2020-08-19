@@ -1,3 +1,22 @@
+@use "sass:map";
+
+$dark-background-colour: #1a2e41;
+$dark-background-border: #141e30;
+$dark-text-colour: #deaa66;
+$dark-link-color: hsl(0, 63%, 68%);
+$dark-link-hover-color: hsl(169, 63%, 68%);
+
+$light-background-colour: #eeeeee;
+$light-background-border: #ffffff;
+$light-text-colour: #141e30;
+
+$light-link: (
+  "text-colour": hsl(213, 100%, 50%),
+  "hover-text-colour": hsl(142, 39%, 39%),
+  "focus-text-colour": hsl(0, 0%, 100%),
+  "focus-background-colour": hsl(142, 39%, 39%),
+);
+
 @font-face {
   font-family: 'rubikmedium';
   font-weight: bold;
@@ -35,54 +54,89 @@
 
 html {
   box-sizing: border-box;
-  border: 1em solid #ffffff;
+  border: 1em solid $dark-background-border;
   min-height: 100%;
+
+  @media screen and (prefers-color-scheme: light) {
+    border: 1em solid $light-background-border;
+  }
 }
 
 @media screen {
   body {
-    background: #eeeeee;
+    background: $dark-background-colour;
+
+    @media screen and (prefers-color-scheme: light) {
+      background: $light-background-colour;
+    }
   }
 }
 
 .hdr {
-  grid-column: one / four;
-}
-
-@media (min-width: 37.5em) {
-  .hdr {
-    grid-column: one / three;
-  }
-}
-
-@media (min-width: 50em) {
-  .hdr {
-    grid-column: one / two;
-  }
+  grid-column: one / five;
 }
 
 .wrapper {
   grid-column: one / five;
-}
+  padding-bottom: 5em;
 
-@media (min-width: 43.75em) {
-  .wrapper {
+  @media (min-width: 43.75em) {
     grid-column: two / three;
+  }
+
+  p {
+    font-size: 1.25em;
+    line-height: 1.55;
+    color: $dark-text-colour;
+
+    @media screen and (prefers-color-scheme: light) {
+      color: $light-text-colour;
+    }
+  }
+
+  a {
+    color: $dark-link-color;
+
+    @media screen and (prefers-color-scheme: light) {
+      color: map.get($light-link, "text-colour");
+    }
+
+    &:hover {
+      color: $dark-link-hover-color;
+
+      @media screen and (prefers-color-scheme: light) {
+        color: map.get($light-link, "hover-text-colour");
+      }
+    }
+
+    &:focus {
+      border-radius: 0.1em;
+      color: $dark-background-colour;
+      background: $dark-link-color;
+      box-shadow: 0 0.1em $dark-link-color;
+      text-decoration-thickness: 0.1em;
+      outline: 0.2em solid transparent;
+
+      @media screen and (prefers-color-scheme: light) {
+        color: map.get($light-link, "focus-text-colour");
+        background: map.get($light-link, "focus-background-colour");
+        box-shadow: 0 0.1em map.get($light-link, "focus-background-colour");
+      }
+    }
   }
 }
 
-.wrapper p {
-  font-size: 1.25em;
-  line-height: 1.55;
-  color: #141e30;
-}
-
 .intro {
-  color: #141e30;
+  color: $dark-text-colour;
   font: bold 3em / 1 'rubikmedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   margin: 0;
   padding: 1em 0 0.5em 0;
   text-transform: lowercase;
+  max-width: 5em;
+
+  @media screen and (prefers-color-scheme: light) {
+    color: $light-text-colour;
+  }
 }
 
 @media (min-width: 43.75em) {
@@ -113,61 +167,16 @@ html {
   position: relative;
 }
 
-.ftr {
-  grid-column: one / six;
-  display: flex;
-  padding: 2em 0;
-  flex-wrap: wrap;
-}
-
 @media (min-width: 43.75em) {
   .ftr {
     grid-column: two / six;
   }
 }
 
-.button {
-  background: #ffffff;
-  text-decoration: none;
-  border-radius: 0.35em;
-  border: 0.2em solid #141e30;
-  padding: 1em 1.5em;
-  display: flex;
-  margin: 0 1em 1em 0;
-  width: auto;
-  align-items: center;
-  justify-content: flex-start;
-  color: #141e30;
-  overflow: hidden;
-  position: relative;
-  transition: background-color 200ms ease-out, box-shadow 100ms ease-out;
-}
-
-.button:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.35em #fa056f;
-}
-
-.button:hover {
-  background: #05eafa;
-}
-
 @media print {
-  .ftr {
-    display: block;
-  }
-
-  .button {
-    border: 0;
-  }
-
-  .button::after {
+  a::after {
     content: attr(href);
     margin-left: 1em;
     text-decoration: underline;
   }
-}
-
-.button__image {
-  margin: 0 1em 0 0;
 }
