@@ -38,7 +38,7 @@
     <meta name="p:domain_verify" content="80746af448e9e3c81111669178cc05eb">
 
     {%- set css %}
-    {% include "../assets/styles/all.css" %}
+      {% include "../assets/styles/all.css" %}
     {% endset %}
     <style>
       {{css | cssmin | safe}}
@@ -48,7 +48,7 @@
   <body class="index grid">
     {% block header %}
       <header class="hdr">
-        <h1 class="intro">{% if photo %}<img src="{{ photo.src }}" srcset="{{ photo.srcSet }}" sizes="1.11em" alt="{{ photo.alt }}" aria-hidden="true" role="presentation">{% endif %}{{ title }}</h1>
+        <h1 class="intro">{% if photo %}<img src="{{ photo.src }}" srcset="{{ photo.srcSet }}" sizes="1.11em" alt="{{ photo.alt }}" aria-hidden="true">{% endif %}{{ title }}</h1>
       </header>
     {% endblock %}
 
