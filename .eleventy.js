@@ -59,7 +59,7 @@ module.exports = (eleventyConfig) => {
           // faster - however we don't want to have to keep stopping and starting
           // eleventy to see every change we make to the 404 page. Since this is
           // for dev only, and not production, I'm okay with that.
-          res.write(fs.readFileSync('site/404/index.html'))
+          res.write(fs.readFileSync('site/404.html'))
 
           res.end()
         })
