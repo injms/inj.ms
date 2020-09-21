@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>{{ title | lower }}</title>
+    <title>{{ title | lower }} | {{ 'site.name.short' | i18n | lower }}</title>
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,7 +41,7 @@
       {% include "../assets/styles/all.css" %}
     {% endset %}
     <style>
-      {{css | cssmin | safe}}
+      {{ css | cssmin | safe }}
     </style>
   </head>
 
@@ -53,9 +53,9 @@
     {% endblock %}
 
     {% block content %}
-      <section class="wrapper">
+      <main class="wrapper">
         {{ content | safe }}
-      </section>
+      </main>
     {% endblock %}
   </body>
 </html>
