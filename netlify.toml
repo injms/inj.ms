@@ -35,108 +35,99 @@
     [headers.values]
         Cache-Control = "public, max-age=86400"
 
-
 # ------------------------------------------------------------------------------
 # Redirects
+# ------------------------------------------------------------------------------
+
+[[redirects]]
+    from = "/"
+    to = "/en-GB/"
+    status = 301
+
+# ------------------------------------------------------------------------------
+# Shortlinks
 # ------------------------------------------------------------------------------
 [[redirects]]
     from = "/inceptionhorn"
     to = "https://inception.davepedu.com/"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/poplb"
     to = "https://iso.500px.com/50-photos-of-pandas-looking-bored"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/quokkaselfie"
     to = "http://news.nationalgeographic.com/news/2015/03/150306-quokkas-selfies-animals-science-photography-australia/"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/iubenda"
     to = "https://github.com/injms/iubenda-for-wp"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/cisfas"
     to = "https://www.theguardian.com/commentisfree/2002/nov/29/1"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/tbpsit"
     to = "http://www.boston.com/bigpicture/2014/04/survival_in_the_amazon.html"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/tmtayn"
     to = "http://edition.cnn.com/interactive/2014/04/opinion/sutter-change-the-list-pangolin-trafficking/"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/ipoie6"
     to = "http://www.brucelawson.co.uk/2010/in-praise-of-ie6/"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/ngpwsb"
     to = "http://news.nationalgeographic.com/news/2014/03/140302-pebble-mine-bristol-bay-alaska-epa-environment/"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/rick"
     to = "https://youtu.be/dQw4w9WgXcQ"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/photography"
     to = "https://www.ianjamesphotography.com/photos"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/photos"
     to = "https://www.ianjamesphotography.com/photos"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/linkedin"
     to = "https://www.linkedin.com/in/injms/"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/instagram"
     to = "https://instagram.com/inj.ms"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/github"
     to = "https://github.com/injms"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/twitter"
     to = "https://twitter.com/_injms_"
     status = 302
-    force = false
 
 [[redirects]]
     from = "/copyright"
     to = "https://www.ianjamesphotography.com/copyright"
     status = 301
-    force = false
