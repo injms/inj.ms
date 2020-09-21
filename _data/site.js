@@ -1,6 +1,5 @@
 const site = {
   // all the defaults
-  locale: 'en-GB',
   baseURL: process.env.CONTEXT === 'production' ? 'https://inj.ms' : process.env.DEPLOY_PRIME_URL,
   themeColour: '#f9bf3b',
   twitter: {

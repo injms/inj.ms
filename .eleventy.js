@@ -1,4 +1,7 @@
 const fs = require('fs')
+
+const i18n = require('eleventy-plugin-i18n')
+
 const { format: prettier } = require('prettier')
 const { minify: htmlMinifier } = require('html-minifier')
 
@@ -72,6 +75,31 @@ module.exports = (eleventyConfig) => {
     ui: false,
   })
 
+  eleventyConfig.addPlugin(i18n, {
+    translations: {
+      site: {
+        name: {
+          short: {
+            'en-GB': 'inj.ms',
+          },
+          long: {
+            'en-GB': 'Ian makes things for the web',
+          },
+        },
+        description: {
+          short: {
+            'en-GB': "Hi, I'm Ian and I make things for the web.",
+          },
+          long: {
+            'en-GB': "I'm Ian and I wear many hats of many colours – though usually I'm found wearing my frontend developer trilby. In my spare time I wear a photography beanie. And the rest of the time I'm wearing a parental hard hat.",
+          },
+        },
+      },
+    },
+    fallbackLocales: {
+      '*': 'en-GB',
+    },
+  })
   return {
     dir: {
       data: '../_data',
