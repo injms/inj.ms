@@ -1,6 +1,6 @@
 /* eslint-env mocha */
+const { expect } = require('chai')
 
-const expect = require('chai').expect
 const markdownify = require('./../../nunjuck-filters/markdownify')
 
 describe('markdownify filter', function () {

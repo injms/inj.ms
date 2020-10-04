@@ -1,7 +1,5 @@
 /* eslint-env mocha */
-
-const expect = require('chai').expect
-const assert = require('chai').assert
+const { expect, assert } = require('chai')
 
 const formatdate = require('./../../nunjuck-filters/formatdate')
 

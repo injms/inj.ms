@@ -1,6 +1,6 @@
 /* eslint-env mocha */
+const { expect } = require('chai')
 
-const expect = require('chai').expect
 const cssmin = require('./../../nunjuck-filters/cssmin')
 
 describe('cssmin filter', function () {
