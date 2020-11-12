@@ -2,7 +2,6 @@ pull_request_rules:
   - name: Dependency bumps merged on approval
     conditions:
       - author~=^dependabot(|-preview)\[bot\]$
-      - "#approved-reviews-by>=1"
       - status-success=Build check (ubuntu-latest, 14.x)
       - status-success=Run filter unit tests (ubuntu-latest, 14.x)
       - status-success=Run linting (ubuntu-latest, 14.x)
@@ -10,13 +9,11 @@ pull_request_rules:
       - status-success=Run tests (ubuntu-latest, 14.x)
       - status-success=AccessLint
       - status-success=Header rules
-      - status-success=Mixed content 
-      - status-success=Redirect rules 
-      - status-success=WIP 
-      - status-success=deploy/netlify 
-      - status-success=percy/inj.ms 
+      - status-success=Mixed content
+      - status-success=Redirect rules
+      - status-success=WIP
+      - status-success=deploy/netlify
+      - status-success=percy/inj.ms
     actions:
       merge:
         method: merge
-        strict: smart
-        
