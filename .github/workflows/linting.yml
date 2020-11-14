@@ -4,26 +4,12 @@ on:
  - push
 
 jobs:
-  run-linting:
-    name: Run linting
-    runs-on: ${{ matrix.platform }}
-
-    strategy:
-      matrix:
-        platform:
-         - ubuntu-latest
-        node-version:
-         - 14.x
-
+  linting:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install
-      run: npm ci
-    - name: Lint JavaScript
-      run: npm run lint:javascript
-    - name: Lint Sass
-      run: npm run lint:sass
+        node-version: 14.x
+    - run: npm ci
+    - run: npm run lint
