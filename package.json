@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",
-    "@injms/quack-nunjucks-filters": "^0.9.3",
+    "@injms/quack-nunjucks-filters": "^0.10.0",
     "autoprefixer": "^9.8.6",
     "clean-css": "^4.2.3",
     "cssnano": "^4.1.10",
