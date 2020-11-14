@@ -4,24 +4,12 @@ on:
  - push
 
 jobs:
-  build:
-    name: Build check
-    runs-on: ${{ matrix.platform }}
-
-    strategy:
-      matrix:
-        platform:
-         - ubuntu-latest
-        node-version:
-         - 14.x
-
+  check-that-it-builds:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install
-      run: npm ci
-    - name: build
-      run: npm run build
+        node-version: 14.x
+    - run: npm ci
+    - run: npm run build
