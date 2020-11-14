@@ -1,14 +1,11 @@
 const fs = require('fs')
-
 const i18n = require('eleventy-plugin-i18n')
-
 const { format: prettier } = require('prettier')
 const { minify: htmlMinifier } = require('html-minifier')
-
-const cssmin = require('./nunjuck-filters/cssmin')
-const debug = require('./nunjuck-filters/debug')
-const formatdate = require('./nunjuck-filters/formatdate')
-const md = require('./nunjuck-filters/markdownify')
+const {
+  cssmin,
+  markdownify,
+} = require('@injms/quack-nunjucks-filters')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -17,21 +14,10 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy('assets')
 
-  // Minifies CSS.
   eleventyConfig.addFilter('cssmin', (code) => cssmin(code))
 
-  // Passes things along to console log and returns without altering.
-  eleventyConfig.addFilter('debug', (s) => debug(s))
-
-  // Display dates in reasonable formats.
-  eleventyConfig.addFilter('humanDate', (date) => formatdate(date, 'human'))
-  eleventyConfig.addFilter('isoDate', (date) => formatdate(date, 'iso'))
-
-  // Turn a string from Markdown to HTML.
-  eleventyConfig.addFilter('markdownify', (markdown) => md.render(markdown))
-
   // Use the same Markdown settings for Eleventy as the Nunjucks filter.
-  eleventyConfig.setLibrary('md', md)
+  eleventyConfig.setLibrary('md', markdownify)
 
   // Prettifys HTML
   eleventyConfig.addTransform('html', (content, outputPath) => {
@@ -68,10 +54,10 @@ module.exports = (eleventyConfig) => {
         })
       },
     },
-    https: {
-      key: '../localhost-key.pem',
-      cert: '../localhost.pem',
-    },
+    // https: {
+    //   key: '../localhost-key.pem',
+    //   cert: '../localhost.pem',
+    // },
     ui: false,
   })
 
