@@ -33,20 +33,17 @@
     "lint:sass": "stylelint '**/*.scss' --cache=true",
     "netlify": "npm run build",
     "start": "eleventy --serve",
-    "test": "npm run test:javascript",
-    "test:javascript": "mocha '__spec__/**/*.spec.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "watch:sass": "gulp",
     "watch:site": "eleventy --serve"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
     "eslint": "^7.13.0",
     "eslint-config-standard": "^16.0.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.2",
-    "mocha": "^8.2.1",
     "stylelint": "^13.7.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0"
