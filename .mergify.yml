@@ -9,7 +9,6 @@ pull_request_rules:
       - status-success=Header rules
       - status-success=Mixed content
       - status-success=Redirect rules
-      - status-success=WIP
       - status-success=deploy/netlify
       - status-success=percy/inj.ms
     actions:
