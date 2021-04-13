@@ -54,20 +54,20 @@ $light-link: (
 
 html {
   box-sizing: border-box;
-  border: 1em solid $dark-background-border;
+  border: 1em solid $light-background-border;
   min-height: 100%;
 
-  @media screen and (prefers-color-scheme: light) {
-    border: 1em solid $light-background-border;
+  @media screen and (prefers-color-scheme: dark) {
+    border: 1em solid $dark-background-border;
   }
 }
 
 @media screen {
   body {
-    background: $dark-background-colour;
+    background: $light-background-colour;
 
-    @media screen and (prefers-color-scheme: light) {
-      background: $light-background-colour;
+    @media screen and (prefers-color-scheme: dark) {
+      background: $dark-background-colour;
     }
   }
 }
@@ -87,55 +87,55 @@ html {
   p {
     font-size: 1.25em;
     line-height: 1.55;
-    color: $dark-text-colour;
+    color: $light-text-colour;
 
-    @media screen and (prefers-color-scheme: light) {
-      color: $light-text-colour;
+    @media screen and (prefers-color-scheme: dark) {
+      color: $dark-text-colour;
     }
   }
 
   a {
-    color: $dark-link-color;
+    color: map.get($light-link, "text-colour");
 
-    @media screen and (prefers-color-scheme: light) {
-      color: map.get($light-link, "text-colour");
+    @media screen and (prefers-color-scheme: dark) {
+      color: $dark-link-color;
     }
 
     &:hover {
-      color: $dark-link-hover-color;
+      color: map.get($light-link, "hover-text-colour");
 
-      @media screen and (prefers-color-scheme: light) {
-        color: map.get($light-link, "hover-text-colour");
+      @media screen and (prefers-color-scheme: dark) {
+        color: $dark-link-hover-color;
       }
     }
 
     &:focus {
+      background: map.get($light-link, "focus-background-colour");
       border-radius: 0.1em;
-      color: $dark-background-colour;
-      background: $dark-link-color;
-      box-shadow: 0 0.1em $dark-link-color;
-      text-decoration-thickness: 0.1em;
+      box-shadow: 0 0.1em map.get($light-link, "focus-background-colour");
+      color: map.get($light-link, "focus-text-colour");
       outline: 0.2em solid transparent;
+      text-decoration-thickness: 0.1em;
 
-      @media screen and (prefers-color-scheme: light) {
-        color: map.get($light-link, "focus-text-colour");
-        background: map.get($light-link, "focus-background-colour");
-        box-shadow: 0 0.1em map.get($light-link, "focus-background-colour");
+      @media screen and (prefers-color-scheme: dark) {
+        background: $dark-link-color;
+        box-shadow: 0 0.1em $dark-link-color;
+        color: $dark-background-colour;
       }
     }
   }
 }
 
 .intro {
-  color: $dark-text-colour;
+  color: $light-text-colour;
   font: bold 3em / 1 'rubikmedium', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   margin: 0;
   padding: 1em 0 0.5em 0;
   text-transform: lowercase;
   max-width: 5em;
 
-  @media screen and (prefers-color-scheme: light) {
-    color: $light-text-colour;
+  @media screen and (prefers-color-scheme: dark) {
+    color: $dark-text-colour;
   }
 }
 
@@ -175,8 +175,6 @@ html {
 
 @media print {
   a::after {
-    content: attr(href);
-    margin-left: 1em;
-    text-decoration: underline;
+    content: " (" attr(href) ")";
   }
 }
