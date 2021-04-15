@@ -1,11 +1,11 @@
 name: Visual regression test
 
 on:
- - pull_request
- - push:
+  push:
     branches:
-      - primary
       - main
+      - master
+  pull_request:
 
 jobs:
   visual-regression-testing:
