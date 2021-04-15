@@ -1,8 +1,11 @@
 name: Visual regression test
 
 on:
- - pull_request
- - push
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
 
 jobs:
   visual-regression-testing:
@@ -18,4 +21,4 @@ jobs:
       with:
         build-directory: "site/"
       env:
-        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
