@@ -20,7 +20,7 @@
     "html-minifier": "^4.0.0",
     "postcss": "^8.2.10",
     "prettier": "^2.2.1",
-    "sass": "^1.32.8"
+    "sass": "^1.32.12"
   },
   "license": "UNLICENSED",
   "scripts": {
