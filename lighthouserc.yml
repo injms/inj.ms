@@ -1,7 +1,0 @@
-ci:
-  collect:
-    staticDistDir: "./site"
-
-  assert:
-    preset: "lighthouse:no-pwa"
-    

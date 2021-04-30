@@ -5,16 +5,7 @@ yarn-error.log
 .env
 credentials.json
 
-# Build directory
-site
-
-# Compiled styles
-assets/styles
-
 # Local Netlify folder
 .netlify
-
-# Caches
-.stylelintcache
 
 .DS_Store
