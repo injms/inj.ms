@@ -10,7 +10,7 @@ jobs:
   visual-regression-testing:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.3.4
+    - uses: actions/checkout@v2.4.0
     - uses: percy/snapshot-action@v0.1.2
       with:
         build-directory: "site/"
