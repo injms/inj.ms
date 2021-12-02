@@ -11,8 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: percy/snapshot-action@v0.1.2
-      with:
-        build-directory: "site/"
+    - run: npx percy snapshot site/
       env:
         PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
