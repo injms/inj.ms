@@ -50,6 +50,7 @@
         src: url(/assets/fonts/rubik-medium.woff2) format("woff2"),
           url(/assets/fonts/rubik-medium.woff) format("woff");
       }
+
       .grid {
         display: grid;
         font-weight: 400;
@@ -65,18 +66,21 @@
         margin: auto;
         max-width: 90em;
       }
+
       @media (min-width: 37.5em) {
         .grid {
           font-size: 1.125em;
           max-width: 80em;
         }
       }
+
       @media (min-width: 50em) {
         .grid {
           font-size: 1.25em;
           max-width: 72em;
         }
       }
+
       html {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -88,35 +92,44 @@
           background: #eee;
         }
       }
+
       .hdr,
       .wrapper {
         grid-column: one/five;
       }
+
       .wrapper {
         padding-bottom: 5em;
       }
+
       .wrapper p {
         font-size: 1.25em;
         line-height: 1.55;
         color: #141e30;
       }
+
       @media screen and (prefers-color-scheme: dark) {
         html {
           border: 1em solid #141e30;
         }
+
         body {
           background: #1a2e41;
         }
+
         .wrapper p {
           color: #deaa66;
         }
       }
+
       .wrapper a {
         color: #0073ff;
       }
+
       .wrapper a:hover {
         color: #3d8a59;
       }
+
       @media screen and (prefers-color-scheme: dark) {
         .wrapper a {
           color: #e17a7a;
@@ -125,6 +138,7 @@
           color: #7ae1ce;
         }
       }
+
       .wrapper a:focus {
         background: #3d8a59;
         border-radius: 0.1em;
@@ -134,6 +148,7 @@
         outline: transparent solid 0.2em;
         text-decoration-thickness: 0.1em;
       }
+
       .intro {
         color: #141e30;
         font-weight: 700;
@@ -145,6 +160,7 @@
         text-transform: lowercase;
         max-width: 5em;
       }
+
       @media screen and (prefers-color-scheme: dark) {
         .wrapper a:focus {
           background: #e17a7a;
@@ -152,31 +168,38 @@
           box-shadow: 0 0.1em #e17a7a;
           color: #1a2e41;
         }
+
         .intro {
           color: #deaa66;
         }
       }
+
       @media (min-width: 43.75em) {
         .wrapper {
           grid-column: two/three;
         }
+
         .index .intro {
           font-size: 5.7vw;
         }
+
         .ftr {
           grid-column: two/six;
         }
       }
+
       @media (min-width: 60.625em) {
         .index .intro {
           font-size: 5.7vw;
         }
       }
+
       @media (min-width: 90em) {
         .index .intro {
           font-size: 3.8em;
         }
       }
+
       .intro img {
         display: inline-block;
         border-radius: 0.03em;
@@ -186,6 +209,7 @@
         width: 1.11em;
         position: relative;
       }
+
       @media print {
         a:after {
           content: " (" attr(href) ")";
@@ -213,7 +237,7 @@
 
       <p>I’m chipping away at putting sorting my photos into some coherant collections and trying to write about stuff more. Currently I’m not doing so well at this…</p>
 
-      <p>And together with my amazing Amy we’re nurturing and raising two energetic, inquisitive, and caring children – a nearly six year old and just turned one year old.</p>
+      <p>And together with my amazing Amy we’re nurturing and raising two energetic, inquisitive, and caring children – a six year old and one-and-a-half year old.</p>
 
       <p>My work and codey projects are on <a href="https://inj.ms/github">GitHub</a>, my <a href="https://inj.ms/linkedin">CV is on LinkedIn</a>, and some photos are on <a href="https://inj.ms/instagram">Instagram</a>. You should take a look.</p>
     </main>
