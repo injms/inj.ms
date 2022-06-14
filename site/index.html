@@ -6,11 +6,14 @@
     <title>ian makes things for the web. | inj.ms</title>
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     <meta name="rating" content="general">
     <meta name="format-detection" content="telephone=no">
-    <meta name="theme-color" content="#f9bf3b">
+
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141e30" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="canonical" href="https://inj.ms">
 
@@ -84,12 +87,17 @@
       html {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        border: 1em solid #fff;
+        background: #ffffff;
+        border: 1em solid #ffffff;
+        border-left-width: max(1em, env(safe-area-inset-left));
+        border-right-width: max(1em, env(safe-area-inset-left));;
+        border-bottom-width: max(1em, env(safe-area-inset-bottom));
         min-height: 100%;
       }
       @media screen {
         body {
-          background: #eee;
+          background: #eeeeee;
+          margin: 0;
         }
       }
 
@@ -110,7 +118,8 @@
 
       @media screen and (prefers-color-scheme: dark) {
         html {
-          border: 1em solid #141e30;
+          background: #141e30;
+          border-color: #141e30;
         }
 
         body {
@@ -218,7 +227,8 @@
     </style>
   </head>
 
-  <body class="index grid">
+  <body class="index">
+    <div class="grid">
     <header class="hdr">
       <h1 class="intro">
         <img
@@ -241,5 +251,6 @@
 
       <p>My work and codey projects are on <a href="https://inj.ms/github">GitHub</a>, my <a href="https://inj.ms/linkedin">CV is on LinkedIn</a>, and some photos are on <a href="https://inj.ms/instagram">Instagram</a>. You should take a look.</p>
     </main>
+    </div>
   </body>
 </html>
