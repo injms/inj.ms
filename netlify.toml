@@ -104,11 +104,6 @@
     status = 302
 
 [[redirects]]
-    from = "/twitter"
-    to = "https://twitter.com/_injms_"
-    status = 302
-
-[[redirects]]
     from = "/copyright"
     to = "https://www.ianjamesphotography.com/copyright"
     status = 302
